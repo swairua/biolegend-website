@@ -5,26 +5,32 @@ import { ArrowRight, Microscope, FlaskConical, TestTube } from "lucide-react";
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   
-  const backgroundImages = [
+  const remoteBackgroundImages = [
     "https://images.pexels.com/photos/9574411/pexels-photo-9574411.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
     "https://images.pexels.com/photos/7639429/pexels-photo-7639429.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
     "https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
     "https://images.pexels.com/photos/8392542/pexels-photo-8392542.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
   ];
+  const localBackgroundImages = [
+    "/images/hero-1.jpg",
+    "/images/hero-2.jpg",
+    "/images/hero-3.jpg",
+    "/images/hero-4.jpg"
+  ];
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % backgroundImages.length);
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % localBackgroundImages.length);
     }, 5000); // Change slide every 5 seconds
 
     return () => clearInterval(timer);
-  }, [backgroundImages.length]);
+  }, [localBackgroundImages.length]);
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden" id="home">
       {/* Background Slider */}
       <div className="absolute inset-0">
-        {backgroundImages.map((image, index) => (
+        {localBackgroundImages.map((image, index) => (
           <div
             key={index}
             className={`absolute inset-0 transition-opacity duration-1000 ${
@@ -35,6 +41,7 @@ const HeroSection = () => {
               src={image}
               alt={`Laboratory background ${index + 1}`}
               className="w-full h-full object-cover"
+              onError={(e) => { (e.currentTarget as HTMLImageElement).src = remoteBackgroundImages[index]; }}
             />
           </div>
         ))}
@@ -58,7 +65,7 @@ const HeroSection = () => {
 
       {/* Slide Indicators */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
-        {backgroundImages.map((_, index) => (
+        {localBackgroundImages.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
@@ -129,25 +136,28 @@ const HeroSection = () => {
           <div className="relative">
             <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 shadow-elegant">
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2Fbac2cd3a1ca7463f8cc340d371458e7f%2F86b9c9bd0a79426d837d2c2897e64a27?format=webp&width=800"
+                src="/images/hero-main.webp"
                 alt="Biolegend Scientific Ltd - Laboratory Equipment and Scientific Solutions"
                 className="w-full h-auto rounded-2xl shadow-lg"
+                onError={(e) => { (e.currentTarget as HTMLImageElement).src = 'https://cdn.builder.io/api/v1/image/assets%2Fbac2cd3a1ca7463f8cc340d371458e7f%2F86b9c9bd0a79426d837d2c2897e64a27?format=webp&width=800'; }}
               />
 
               {/* Additional overlay images */}
               <div className="absolute -top-2 -right-2 w-16 h-16 rounded-xl overflow-hidden shadow-lg border-2 border-white">
                 <img
-                  src="https://images.pexels.com/photos/8392542/pexels-photo-8392542.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop"
+                  src="/images/overlay-1.jpg"
                   alt="Water testing equipment"
                   className="w-full h-full object-cover"
+                  onError={(e) => { (e.currentTarget as HTMLImageElement).src = 'https://images.pexels.com/photos/8392542/pexels-photo-8392542.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop'; }}
                 />
               </div>
 
               <div className="absolute -bottom-2 -left-2 w-16 h-16 rounded-xl overflow-hidden shadow-lg border-2 border-white">
                 <img
-                  src="https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop"
+                  src="/images/overlay-2.jpg"
                   alt="Laboratory analysis"
                   className="w-full h-full object-cover"
+                  onError={(e) => { (e.currentTarget as HTMLImageElement).src = 'https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop'; }}
                 />
               </div>
             </div>
