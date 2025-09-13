@@ -19,14 +19,17 @@ const SEO = ({
   type = "website",
   schema
 }: SEOProps) => {
+  const canonicalUrl = url || (typeof window !== 'undefined' ? window.location.href : 'https://biolegendscientific.co.ke');
+  const absoluteImage = image.startsWith('http') ? image : (() => { try { return new URL(image, canonicalUrl).toString(); } catch { return image; } })();
+  const is404 = /404|not found/i.test(title);
   // Enhanced structured data based on page type
   const getEnhancedSchema = () => {
     const baseSchema = {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Biolegend Scientific Ltd",
-      "url": url,
-      "logo": `${url}${image}`,
+      "url": canonicalUrl,
+      "logo": absoluteImage,
       "description": description,
       "alternateName": ["Biolegend Scientific", "Laboratory Supplier Kenya", "Palintest Supplier Kenya", "MicroMedica Supplier Kenya", "Loba Chemie Distributor Kenya"],
       "knowsAbout": ["Water Testing", "Plant Tissue Culture", "Microbiology Media", "Dehydrated Culture Media", "Laboratory Chemicals", "Chemical Analysis"],
@@ -54,8 +57,8 @@ const SEO = ({
     };
 
     // Add breadcrumb for service/industry pages
-    if (url.includes('/services/') || url.includes('/industries/')) {
-      const pathParts = url.split('/');
+    if (canonicalUrl.includes('/services/') || url.includes('/industries/')) {
+      const pathParts = canonicalUrl.split('/');
       const breadcrumbList = {
         "@type": "BreadcrumbList",
         "itemListElement": [
@@ -200,15 +203,15 @@ const SEO = ({
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content="Biolegend Scientific Ltd" />
-      <meta name="robots" content="index, follow" />
-      <link rel="canonical" href={url} />
+      <meta name="robots" content={is404 ? "noindex, nofollow" : "index, follow"} />
+      <link rel="canonical" href={canonicalUrl} />
       
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
-      <meta property="og:url" content={url} />
+      <meta property="og:url" content={canonicalUrl} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={`${image.startsWith('http') ? image : `${url}${image}`}`}/>
+      <meta property="og:image" content={absoluteImage}/>
       <meta property="og:site_name" content="Biolegend Scientific Ltd" />
       
      
@@ -273,6 +276,12 @@ const SEO = ({
       <meta name="business:contact_data:phone_number" content="+254741207690" />
       <meta name="business:contact_data:email" content="biolegend@biolegendscientific.co.ke" />
       
+      {/* Twitter Cards */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={absoluteImage} />
+
       {/* JSON-LD Schema */}
       {Array.isArray(finalSchema) ? (
         finalSchema.map((schemaItem, index) => (
