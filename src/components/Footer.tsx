@@ -6,6 +6,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, Di
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
+const CONTACT_EMAIL = "biolegend@biolegendscientific.co.ke";
 const Footer = () => {
   const [quoteOpen, setQuoteOpen] = useState(false);
   const [catalogOpen, setCatalogOpen] = useState(false);
@@ -85,7 +86,7 @@ const Footer = () => {
                 <Mail className="w-5 h-5 mr-3 text-biolegend-yellow" />
                 <div>
                   <p className="font-medium">Email:</p>
-                  <p className="text-white/90 text-sm">biolegend@biolegendscientific.co.ke</p>
+                  <p className="text-white/90 text-sm">{CONTACT_EMAIL}</p>
                 </div>
               </div>
 
@@ -141,7 +142,7 @@ const Footer = () => {
                     const details = (fd.get('details') as string) || '';
                     const subject = `Quote Request from ${name || 'Website Visitor'}`;
                     const body = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nCompany: ${company}\n\nDetails:\n${details}`;
-                    window.location.href = `mailto:biolegend@biolegendscientific.co.ke?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
                     setQuoteOpen(false);
                   }}
                   className="space-y-4"
@@ -192,7 +193,7 @@ const Footer = () => {
                     const notes = (fd.get('notes') as string) || '';
                     const subject = `Product Catalogue Request from ${name || 'Website Visitor'}`;
                     const body = `Name: ${name}\nEmail: ${email}\nInterest: ${interest}\n\nNotes:\n${notes}`;
-                    window.location.href = `mailto:biolegend@biolegendscientific.co.ke?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
                     setCatalogOpen(false);
                   }}
                   className="space-y-4"
