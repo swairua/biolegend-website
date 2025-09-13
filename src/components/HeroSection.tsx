@@ -20,11 +20,11 @@ const HeroSection = () => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % backgroundImages.length);
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % localBackgroundImages.length);
     }, 5000); // Change slide every 5 seconds
 
     return () => clearInterval(timer);
-  }, [backgroundImages.length]);
+  }, [localBackgroundImages.length]);
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden" id="home">
@@ -65,7 +65,7 @@ const HeroSection = () => {
 
       {/* Slide Indicators */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
-        {backgroundImages.map((_, index) => (
+        {localBackgroundImages.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
