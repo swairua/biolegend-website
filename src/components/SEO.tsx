@@ -80,7 +80,7 @@ const SEO = ({
             "@type": "ListItem",
             "position": 3,
             "name": title.split(' - ')[0],
-            "item": url
+            "item": canonicalUrl
           });
         }
       }
@@ -97,7 +97,7 @@ const SEO = ({
             "@type": "ListItem",
             "position": 3,
             "name": title.split(' - ')[0],
-            "item": url
+            "item": canonicalUrl
           });
         }
       }
@@ -106,7 +106,7 @@ const SEO = ({
     }
 
     // Enhanced product catalog for specific service pages
-    if (url.includes('/services/water-testing')) {
+    if (canonicalUrl.includes('/services/water-testing')) {
       baseSchema.hasOfferCatalog = {
         "@type": "OfferCatalog",
         "name": "Palintest Water Testing Equipment",
@@ -133,7 +133,7 @@ const SEO = ({
           }
         ]
       };
-    } else if (url.includes('/micromedica')) {
+    } else if (canonicalUrl.includes('/micromedica')) {
       baseSchema.hasOfferCatalog = {
         "@type": "OfferCatalog",
         "name": "MicroMedica Dehydrated Culture Media",
@@ -142,7 +142,7 @@ const SEO = ({
           {"@type":"Offer","itemOffered":{"@type":"Product","name":"Selective Media","category":"Microbiology Media","brand":{"@type":"Brand","name":"MicroMedica"}}}
         ]
       };
-    } else if (url.includes('/loba-chemie')) {
+    } else if (canonicalUrl.includes('/loba-chemie')) {
       baseSchema.hasOfferCatalog = {
         "@type": "OfferCatalog",
         "name": "Loba Chemie Laboratory Chemicals",
@@ -151,7 +151,7 @@ const SEO = ({
           {"@type":"Offer","itemOffered":{"@type":"Product","name":"Solvents","category":"Laboratory Chemicals","brand":{"@type":"Brand","name":"Loba Chemie"}}}
         ]
       };
-    } else if (url.includes('/services/laboratory-chemicals')) {
+    } else if (canonicalUrl.includes('/services/laboratory-chemicals')) {
       baseSchema.hasOfferCatalog = {
         "@type": "OfferCatalog",
         "name": "Laboratory Chemicals and Reagents",
