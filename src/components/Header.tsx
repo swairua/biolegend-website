@@ -70,9 +70,10 @@ const Header = () => {
             {/* Logo */}
             <div className="flex-shrink-0">
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F6a1f9014ca2549378a149859cedc5ead%2F3a08b35e4e8c4762a6ef27dc2e13d16f"
+                src="/images/biolegend-logo.png"
                 alt="Biolegend Scientific Ltd Logo"
                 className="h-24 w-auto"
+                onError={(e) => { (e.currentTarget as HTMLImageElement).src = 'https://cdn.builder.io/api/v1/image/assets%2F6a1f9014ca2549378a149859cedc5ead%2F3a08b35e4e8c4762a6ef27dc2e13d16f'; }}
               />
             </div>
 
