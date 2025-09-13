@@ -11,7 +11,7 @@ const PartnersSection = () => {
       partners: [
         { name: "Labtron", description: "Advanced laboratory equipment and instrumentation", specialty: "Centrifuges, Incubators, Autoclaves", url: "https://www.labtron.com" },
         { name: "Draglab Technologies", description: "Cutting-edge laboratory instruments and automation", specialty: "Digital Equipment, Laboratory Software", url: "https://www.drag-lab.de/EN/" },
-        { name: "Hongshun Medical Instrument", description: "Medical and laboratory instrumentation", specialty: "Medical Devices, Diagnostic Equipment", url: "http://www.asian-medical.com" },
+        { name: "Hongshun Medical Instrument", description: "Medical and laboratory instrumentation", specialty: "Medical Devices, Diagnostic Equipment", url: "https://www.asian-medical.com" },
         { name: "Biobase", description: "Comprehensive laboratory equipment and biosafety solutions", specialty: "Biosafety Cabinets, PCR Equipment", url: "https://www.biobase.cc" },
         { name: "Scitek Global", description: "Global provider of scientific instruments", specialty: "Analytical Instruments, Testing Equipment", url: "https://www.scitekglobal.com" },
         { name: "Dlab", description: "Professional laboratory equipment for scientific applications", specialty: "Mixers, Pipettes, Heating Plates", url: "https://www.dlabsci.com" }
