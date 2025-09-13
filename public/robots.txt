@@ -1,0 +1,49 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://biolegendscientific.co.ke/sitemap.xml
+
+# High priority pages for search engines
+Allow: /services/water-testing
+Allow: /services/laboratory-chemicals
+Allow: /services/chromatography-solutions
+Allow: /services/laboratory-glassware
+Allow: /industries/healthcare
+Allow: /industries/pharmaceutical
+Allow: /contact
+Allow: /services
+Allow: /industries
+
+# Optimize crawling for key supplier-related content
+Allow: /*palintest*
+Allow: /*water-testing*
+Allow: /*water-analysis*
+Allow: /*laboratory*
+Allow: /*chemicals*
+Allow: /*glassware*
+Allow: /*chromatography*
+Allow: /*suppliers*
+Allow: /*equipment*
+
+# Allow image crawling for supplier images
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.png
+Allow: /*.webp
+Allow: /*.svg
+
+# Block unnecessary paths to save crawl budget
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /api/
+Disallow: /*.json$
+
+# Specific redirects for legacy URLs
+# Old .html URLs will be redirected via server config
+
+# Crawl delay for polite crawling
+Crawl-delay: 1
+
+# Additional sitemaps (if any)
+# Sitemap: https://biolegendscientific.co.ke/products-sitemap.xml

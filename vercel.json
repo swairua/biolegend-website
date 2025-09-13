@@ -1,0 +1,35 @@
+{
+  "redirects": [
+    {
+      "source": "/palintest.html",
+      "destination": "/services/water-testing",
+      "permanent": true
+    },
+    {
+      "source": "/water-testing.html",
+      "destination": "/services/water-testing",
+      "permanent": true
+    },
+    {
+      "source": "/services/(.*).html",
+      "destination": "/services/$1",
+      "permanent": true
+    },
+    {
+      "source": "/industries/(.*).html",
+      "destination": "/industries/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*).html",
+      "destination": "/$1",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
