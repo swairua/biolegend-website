@@ -72,7 +72,7 @@ const Header = () => {
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F6a1f9014ca2549378a149859cedc5ead%2F3a08b35e4e8c4762a6ef27dc2e13d16f"
                 alt="Biolegend Scientific Ltd Logo"
-                className="h-20 w-auto"
+                className="h-24 w-auto"
               />
             </div>
 
