@@ -32,7 +32,7 @@ const PartnerPage = () => {
       try { return new URL(partner.websiteUrl).origin; } catch { return undefined; }
     })();
 
-    const tryLoad = (src: string, timeout = 2500) => new Promise<string | null>((resolve) => {
+    const tryLoad = (src: string, timeout = 1500) => new Promise<string | null>((resolve) => {
       const img = new Image();
       img.referrerPolicy = 'no-referrer';
       const to = setTimeout(() => { resolve(null); }, timeout);
@@ -43,27 +43,42 @@ const PartnerPage = () => {
 
     const buildCandidates = (type: 'logo' | 'hero'): string[] => {
       if (!origin) return [];
+
       const logoNames = [
-        'logo-1.png','logo.png','logo.svg','white-logo.png','logo-2.png','logo-black.png','logo-1.svg','logo.webp'
+        'logo.svg','logo.png','logo.webp','logo-1.svg','logo-1.png','logo-2.png','logo-black.png','white-logo.png'
       ];
-      const heroNames = [
-        'banner-1.jpg','banner.jpg','hero.jpg','header.jpg','banner-1.png','hero.png','header.png','hero.webp','banner.webp'
+
+      const heroBaseNames = [
+        'hero','banner','header','masthead','cover','slide-1','home-hero','homepage-hero','og-image','social','share'
       ];
+      const heroExts = ['jpg','jpeg','png','webp'];
+      const heroNames = heroBaseNames.flatMap(n => heroExts.map(ext => `${n}.${ext}`));
+
       const names = type === 'logo' ? logoNames : heroNames;
+
       const months = ['01','03','05','07','09','11'];
       const year = new Date().getFullYear();
-      const years = [year, year-1, year-2, year-3, year-4];
+      const years = [year, year-1, year-2];
 
-      const urls: string[] = [];
-      // direct uploads root
-      for (const n of names) urls.push(`${origin}/wp-content/uploads/${n}`);
-      // year/month guess
+      const candidates: string[] = [];
+
+      // Priority 1: common root folders
+      const baseDirs = ['', '/images', '/img', '/wp-content/uploads'];
+      for (const dir of baseDirs) {
+        for (const n of names) candidates.push(`${origin}${dir}/${n}`);
+      }
+
+      // Priority 2: WordPress year/month paths (recent years subset)
       for (const y of years) {
         for (const m of months) {
-          for (const n of names) urls.push(`${origin}/wp-content/uploads/${y}/${m}/${n}`);
+          for (const n of names) candidates.push(`${origin}/wp-content/uploads/${y}/${m}/${n}`);
         }
       }
-      return urls;
+
+      // Deduplicate and cap to avoid excessive network attempts
+      const deduped = Array.from(new Set(candidates));
+      const cap = type === 'logo' ? 40 : 80;
+      return deduped.slice(0, cap);
     };
 
     const pickFirst = async (urls: string[], batchSize = 6): Promise<string | undefined> => {
