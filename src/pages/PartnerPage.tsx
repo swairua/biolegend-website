@@ -90,10 +90,13 @@ const PartnerPage = () => {
                   </div>
                 </div>
                 <div className="relative">
-                  <img 
-                    src={partner.image} 
+                  <img
+                    src={partner.image}
                     alt={partner.name}
                     className="rounded-2xl shadow-2xl w-full h-80 object-cover"
+                    loading="lazy"
+                    referrerPolicy="no-referrer"
+                    onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/placeholder.svg'; }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
                 </div>
