@@ -65,7 +65,7 @@ export const actualSuppliers: EnhancedSupplier[] = [
     specialties: ["Dehydrated Media", "Agar & Broths", "Selective Media"],
     logo: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=200&h=100&fit=crop&crop=center",
     image: "https://images.unsplash.com/photo-1581092335691-39c6cc8932a8?w=800&h=400&fit=crop&crop=center",
-    websiteUrl: "https://www.micromedicalabs.com",
+    websiteUrl: "https://micromedicalab.com/",
     contactInfo: {},
     category: "Microbiology & Pathology"
   },
