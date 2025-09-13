@@ -52,7 +52,7 @@ const PartnersSection = () => {
     {
       category: "Laboratory Glassware",
       partners: [
-        { name: "Glassco", description: "Premium laboratory glassware manufacturer from India", specialty: "Borosilicate Glass, Volumetric Glassware, General Purpose", url: "https://www.glasscolabware.com" },
+        { name: "Glassco", description: "Premium laboratory glassware manufacturer from India", specialty: "Borosilicate Glass, Volumetric Glassware, General Purpose", url: "https://glasscolabs.com" },
         { name: "Pyrex", description: "World-renowned brand for high-quality laboratory glass", specialty: "Heat Resistant, Chemical Resistant, Precision Volumetric", url: "https://www.pyrex.com" }
       ]
     }
