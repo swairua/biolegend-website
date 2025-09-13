@@ -63,8 +63,8 @@ export const actualSuppliers: EnhancedSupplier[] = [
     name: "MicroMedica Laboratories",
     description: "Dehydrated culture media and microbiology products for clinical, food, and environmental testing",
     specialties: ["Dehydrated Media", "Agar & Broths", "Selective Media"],
-    logo: "https://micromedicalab.com/wp-content/uploads/2023/05/logo-1.png",
-    image: "https://micromedicalab.com/wp-content/uploads/2023/05/banner-1.jpg",
+    logo: "https://images.unsplash.com/photo-1581091012184-7c2544028431?w=200&h=100&fit=crop&crop=center",
+    image: "https://images.unsplash.com/photo-1581092335691-39c6cc8932a8?w=800&h=400&fit=crop&crop=center",
     websiteUrl: "https://micromedicalab.com/",
     contactInfo: {},
     category: "Microbiology & Pathology"
