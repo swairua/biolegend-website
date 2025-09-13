@@ -12,9 +12,10 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <div className="mb-6">
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F6a1f9014ca2549378a149859cedc5ead%2F3a08b35e4e8c4762a6ef27dc2e13d16f"
+                src="/images/biolegend-logo.png"
                 alt="Biolegend Scientific Ltd"
                 className="h-20 w-auto mb-4"
+                onError={(e) => { (e.currentTarget as HTMLImageElement).src = 'https://cdn.builder.io/api/v1/image/assets%2F6a1f9014ca2549378a149859cedc5ead%2F3a08b35e4e8c4762a6ef27dc2e13d16f'; }}
               />
               <h3 className="text-2xl font-bold mb-2">BIOLEGEND SCIENTIFIC LTD</h3>
               <p className="text-biolegend-yellow font-medium italic">Delivering Discoveries..... and more</p>
