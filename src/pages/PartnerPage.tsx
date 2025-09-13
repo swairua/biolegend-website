@@ -1,4 +1,5 @@
 import { useParams, Navigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { ExternalLink, Mail, Phone, MapPin, Calendar, Globe, Award, Users } from "lucide-react";
 import Header from "@/components/Header";
@@ -16,6 +17,82 @@ const PartnerPage = () => {
   // Get partner ID from either URL parameter or pathname
   const currentPartnerId = partnerId || window.location.pathname.slice(1); // Remove leading slash
   const partner = suppliers.find(s => s.id === currentPartnerId);
+
+  const [logoUrl, setLogoUrl] = useState<string | undefined>(undefined);
+  const [heroUrl, setHeroUrl] = useState<string | undefined>(undefined);
+
+  useEffect(() => {
+    if (!partner?.websiteUrl) {
+      setLogoUrl(partner?.logo);
+      setHeroUrl(partner?.image);
+      return;
+    }
+
+    const origin = (() => {
+      try { return new URL(partner.websiteUrl).origin; } catch { return undefined; }
+    })();
+
+    const tryLoad = (src: string, timeout = 2500) => new Promise<string | null>((resolve) => {
+      const img = new Image();
+      img.referrerPolicy = 'no-referrer';
+      const to = setTimeout(() => { resolve(null); }, timeout);
+      img.onload = () => { clearTimeout(to); resolve(src); };
+      img.onerror = () => { clearTimeout(to); resolve(null); };
+      img.src = src;
+    });
+
+    const buildCandidates = (type: 'logo' | 'hero'): string[] => {
+      if (!origin) return [];
+      const logoNames = [
+        'logo-1.png','logo.png','logo.svg','white-logo.png','logo-2.png','logo-black.png','logo-1.svg','logo.webp'
+      ];
+      const heroNames = [
+        'banner-1.jpg','banner.jpg','hero.jpg','header.jpg','banner-1.png','hero.png','header.png','hero.webp','banner.webp'
+      ];
+      const names = type === 'logo' ? logoNames : heroNames;
+      const months = ['01','03','05','07','09','11'];
+      const year = new Date().getFullYear();
+      const years = [year, year-1, year-2, year-3, year-4];
+
+      const urls: string[] = [];
+      // direct uploads root
+      for (const n of names) urls.push(`${origin}/wp-content/uploads/${n}`);
+      // year/month guess
+      for (const y of years) {
+        for (const m of months) {
+          for (const n of names) urls.push(`${origin}/wp-content/uploads/${y}/${m}/${n}`);
+        }
+      }
+      return urls;
+    };
+
+    const pickFirst = async (urls: string[], batchSize = 6): Promise<string | undefined> => {
+      for (let i = 0; i < urls.length; i += batchSize) {
+        const batch = urls.slice(i, i + batchSize);
+        const results = await Promise.all(batch.map(u => tryLoad(u)));
+        const found = results.find((r): r is string => typeof r === 'string' && !!r);
+        if (found) return found;
+      }
+      return undefined;
+    };
+
+    (async () => {
+      const defaultLogo = partner.logo;
+      const defaultHero = partner.image;
+      setLogoUrl(defaultLogo);
+      setHeroUrl(defaultHero);
+
+      if (origin) {
+        const [foundLogo, foundHero] = await Promise.all([
+          pickFirst(buildCandidates('logo')),
+          pickFirst(buildCandidates('hero'))
+        ]);
+        if (foundLogo) setLogoUrl(foundLogo);
+        if (foundHero) setHeroUrl(foundHero);
+      }
+    })();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentPartnerId]);
 
   if (!partner) {
     return <Navigate to="/404" replace />;
@@ -46,10 +123,13 @@ const PartnerPage = () => {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
                   <div className="flex items-center gap-4 mb-6">
-                    <img 
-                      src={partner.logo} 
+                    <img
+                      src={logoUrl || partner.logo}
                       alt={`${partner.name} logo`}
                       className="w-20 h-12 object-contain bg-white/10 backdrop-blur-sm rounded-lg p-2"
+                      loading="lazy"
+                      referrerPolicy="no-referrer"
+                      onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/placeholder.svg'; }}
                     />
                     {partner.isOfficialDistributor && (
                       <Badge variant="secondary" className="bg-biolegend-yellow text-biolegend-purple-dark font-semibold">
@@ -87,10 +167,13 @@ const PartnerPage = () => {
                   </div>
                 </div>
                 <div className="relative">
-                  <img 
-                    src={partner.image} 
+                  <img
+                    src={heroUrl || partner.image}
                     alt={partner.name}
                     className="rounded-2xl shadow-2xl w-full h-80 object-cover"
+                    loading="lazy"
+                    referrerPolicy="no-referrer"
+                    onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/placeholder.svg'; }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
                 </div>
