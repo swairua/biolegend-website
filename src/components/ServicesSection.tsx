@@ -182,7 +182,7 @@ const ServicesSection = () => {
       image: "https://images.pexels.com/photos/8471963/pexels-photo-8471963.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop",
       suppliers: [
         { name: "Pyrex", url: "https://www.pyrex.com" },
-        { name: "Glassco", url: "https://www.glasscolabware.com" }
+        { name: "Glassco", url: "https://glasscolabs.com" }
       ],
       items: [
         "Pyrex Heat-Resistant Glass",
