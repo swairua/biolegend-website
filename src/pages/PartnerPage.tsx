@@ -46,10 +46,13 @@ const PartnerPage = () => {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
                   <div className="flex items-center gap-4 mb-6">
-                    <img 
-                      src={partner.logo} 
+                    <img
+                      src={partner.logo}
                       alt={`${partner.name} logo`}
                       className="w-20 h-12 object-contain bg-white/10 backdrop-blur-sm rounded-lg p-2"
+                      loading="lazy"
+                      referrerPolicy="no-referrer"
+                      onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/placeholder.svg'; }}
                     />
                     {partner.isOfficialDistributor && (
                       <Badge variant="secondary" className="bg-biolegend-yellow text-biolegend-purple-dark font-semibold">
