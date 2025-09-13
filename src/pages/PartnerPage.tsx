@@ -98,6 +98,15 @@ const PartnerPage = () => {
     return <Navigate to="/404" replace />;
   }
 
+  // Treat stock photos as placeholders; avoid showing them as partner hero assets
+  const isStockPlaceholder = (url?: string) =>
+    !url ? false : /images\.(unsplash|pexels)\.com/i.test(url);
+
+  const effectiveLogo = logoUrl || partner.logo;
+  const effectiveHero = heroUrl || partner.image;
+  const showHeroImage = !!effectiveHero && !isStockPlaceholder(effectiveHero);
+  const isLogoPlaceholder = isStockPlaceholder(effectiveLogo);
+
   return (
     <>
       <Helmet>
@@ -123,14 +132,20 @@ const PartnerPage = () => {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
                   <div className="flex items-center gap-4 mb-6">
-                    <img
-                      src={logoUrl || partner.logo}
-                      alt={`${partner.name} logo`}
-                      className="w-20 h-12 object-contain bg-white/10 backdrop-blur-sm rounded-lg p-2"
-                      loading="lazy"
-                      referrerPolicy="no-referrer"
-                      onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/placeholder.svg'; }}
-                    />
+                    {isLogoPlaceholder ? (
+                      <div className="w-20 h-12 bg-white/10 backdrop-blur-sm rounded-lg p-2 flex items-center justify-center text-white/90 text-sm font-semibold">
+                        {partner.name}
+                      </div>
+                    ) : (
+                      <img
+                        src={effectiveLogo}
+                        alt={`${partner.name} logo`}
+                        className="w-20 h-12 object-contain bg-white/10 backdrop-blur-sm rounded-lg p-2"
+                        loading="lazy"
+                        referrerPolicy="no-referrer"
+                        onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/placeholder.svg'; }}
+                      />
+                    )}
                     {partner.isOfficialDistributor && (
                       <Badge variant="secondary" className="bg-biolegend-yellow text-biolegend-purple-dark font-semibold">
                         Official Distributor
@@ -144,8 +159,8 @@ const PartnerPage = () => {
                     {partner.description}
                   </p>
                   <div className="flex flex-wrap gap-4">
-                    <Button 
-                      size="lg" 
+                    <Button
+                      size="lg"
                       variant="secondary"
                       className="bg-biolegend-yellow text-biolegend-purple-dark hover:bg-biolegend-yellow-light"
                       onClick={() => window.open(partner.websiteUrl, '_blank')}
@@ -154,8 +169,8 @@ const PartnerPage = () => {
                       Visit Website
                     </Button>
                     {partner.productCatalogUrl && (
-                      <Button 
-                        size="lg" 
+                      <Button
+                        size="lg"
                         variant="outline"
                         className="bg-transparent border-white text-white hover:bg-white hover:text-biolegend-purple"
                         onClick={() => window.open(partner.productCatalogUrl, '_blank')}
@@ -167,15 +182,19 @@ const PartnerPage = () => {
                   </div>
                 </div>
                 <div className="relative">
-                  <img
-                    src={heroUrl || partner.image}
-                    alt={partner.name}
-                    className="rounded-2xl shadow-2xl w-full h-80 object-cover"
-                    loading="lazy"
-                    referrerPolicy="no-referrer"
-                    onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/placeholder.svg'; }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+                  {showHeroImage && (
+                    <>
+                      <img
+                        src={effectiveHero}
+                        alt={partner.name}
+                        className="rounded-2xl shadow-2xl w-full h-80 object-cover"
+                        loading="lazy"
+                        referrerPolicy="no-referrer"
+                        onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/placeholder.svg'; }}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+                    </>
+                  )}
                 </div>
               </div>
             </div>
