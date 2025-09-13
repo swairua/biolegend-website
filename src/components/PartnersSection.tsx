@@ -78,9 +78,10 @@ const PartnersSection = () => {
           {/* Partners Hero Image */}
           <div className="relative rounded-lg overflow-hidden shadow-elegant mb-12">
             <img
-              src="https://images.pexels.com/photos/9242838/pexels-photo-9242838.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop"
+              src="/images/partners-hero.jpg"
               alt="Professional laboratory equipment and scientific instruments from our trusted partners"
               className="w-full h-64 md:h-80 object-cover"
+              onError={(e) => { (e.currentTarget as HTMLImageElement).src = 'https://images.pexels.com/photos/9242838/pexels-photo-9242838.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop'; }}
             />
             <div className="absolute inset-0 bg-biolegend-purple/10"></div>
           </div>
