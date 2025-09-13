@@ -148,14 +148,14 @@ const PartnerPage = () => {
                 <div>
                   <div className="flex items-center gap-4 mb-6">
                     {isLogoPlaceholder ? (
-                      <div className="w-24 h-14 bg-white/10 backdrop-blur-sm rounded-lg p-2 flex items-center justify-center text-white/90 text-sm font-semibold">
+                      <div className="w-20 h-12 bg-white/10 backdrop-blur-sm rounded-lg p-2 flex items-center justify-center text-white/90 text-sm font-semibold">
                         {partner.name}
                       </div>
                     ) : (
                       <img
                         src={effectiveLogo}
                         alt={`${partner.name} logo`}
-                        className="w-24 h-14 object-contain bg-white/10 backdrop-blur-sm rounded-lg p-2"
+                        className="w-20 h-12 object-contain bg-white/10 backdrop-blur-sm rounded-lg p-2"
                         loading="lazy"
                         referrerPolicy="no-referrer"
                         onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/placeholder.svg'; }}
