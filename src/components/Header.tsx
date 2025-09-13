@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Menu, X, ChevronDown, ChevronRight, Facebook, Twitter, Linkedin, Microscope, Droplets, Sprout, Milk, Leaf, Scale, Eye, TestTube, Beaker, Thermometer, Filter, Stethoscope, Shield, FlaskConical, BookOpen } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronRight, Facebook, Linkedin, Microscope, Droplets, Sprout, Milk, Leaf, Scale, Eye, TestTube, Beaker, Thermometer, Filter, Stethoscope, Shield, FlaskConical, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -48,9 +48,6 @@ const Header = () => {
             <div className="flex space-x-4">
               <a href="https://www.facebook.com/biolegendscientific" target="_blank" rel="noopener noreferrer" className="text-white hover:text-biolegend-yellow transition-colors">
                 <Facebook className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-white hover:text-biolegend-yellow transition-colors">
-                <Twitter className="w-5 h-5" />
               </a>
               <a href="https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=biolegend-scientific-934b1937b" target="_blank" rel="noopener noreferrer" className="text-white hover:text-biolegend-yellow transition-colors">
                 <Linkedin className="w-5 h-5" />

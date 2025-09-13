@@ -177,7 +177,7 @@ export const actualSuppliers: EnhancedSupplier[] = [
     specialties: ["Borosilicate Glass", "Volumetric Glassware", "General Purpose"],
     logo: "https://images.pexels.com/photos/8471963/pexels-photo-8471963.jpeg?auto=compress&cs=tinysrgb&w=100&h=60&fit=crop",
     image: "https://images.pexels.com/photos/8471963/pexels-photo-8471963.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop",
-    websiteUrl: "https://www.glasscolabware.com",
+    websiteUrl: "https://glasscolabs.com",
     contactInfo: {
       email: "info@glasscolabware.com"
     },

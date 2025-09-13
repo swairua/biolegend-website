@@ -11,7 +11,7 @@ const PartnersSection = () => {
       partners: [
         { name: "Labtron", description: "Advanced laboratory equipment and instrumentation", specialty: "Centrifuges, Incubators, Autoclaves", url: "https://www.labtron.com" },
         { name: "Draglab Technologies", description: "Cutting-edge laboratory instruments and automation", specialty: "Digital Equipment, Laboratory Software", url: "https://www.drag-lab.de/EN/" },
-        { name: "Hongshun Medical Instrument", description: "Medical and laboratory instrumentation", specialty: "Medical Devices, Diagnostic Equipment", url: "http://www.asian-medical.com" },
+        { name: "Hongshun Medical Instrument", description: "Medical and laboratory instrumentation", specialty: "Medical Devices, Diagnostic Equipment", url: "https://www.asian-medical.com" },
         { name: "Biobase", description: "Comprehensive laboratory equipment and biosafety solutions", specialty: "Biosafety Cabinets, PCR Equipment", url: "https://www.biobase.cc" },
         { name: "Scitek Global", description: "Global provider of scientific instruments", specialty: "Analytical Instruments, Testing Equipment", url: "https://www.scitekglobal.com" },
         { name: "Dlab", description: "Professional laboratory equipment for scientific applications", specialty: "Mixers, Pipettes, Heating Plates", url: "https://www.dlabsci.com" }
@@ -52,7 +52,7 @@ const PartnersSection = () => {
     {
       category: "Laboratory Glassware",
       partners: [
-        { name: "Glassco", description: "Premium laboratory glassware manufacturer from India", specialty: "Borosilicate Glass, Volumetric Glassware, General Purpose", url: "https://www.glasscolabware.com" },
+        { name: "Glassco", description: "Premium laboratory glassware manufacturer from India", specialty: "Borosilicate Glass, Volumetric Glassware, General Purpose", url: "https://glasscolabs.com" },
         { name: "Pyrex", description: "World-renowned brand for high-quality laboratory glass", specialty: "Heat Resistant, Chemical Resistant, Precision Volumetric", url: "https://www.pyrex.com" }
       ]
     }

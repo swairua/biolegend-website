@@ -24,7 +24,7 @@ const ScientificEquipment = () => {
       name: "Hongshun Medical Instrument",
       description: "Medical and laboratory instrumentation for healthcare applications",
       specialties: ["Medical Devices", "Diagnostic Equipment", "Healthcare Instruments", "Patient Monitoring"],
-      website: "http://www.asian-medical.com"
+      website: "https://www.asian-medical.com"
     },
     {
       name: "Biobase",

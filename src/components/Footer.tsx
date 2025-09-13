@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Clock, Facebook, Twitter, Linkedin, MessageCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Facebook, Linkedin, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -122,9 +122,6 @@ const Footer = () => {
               <div className="flex space-x-4">
                 <a href="https://www.facebook.com/biolegendscientific" target="_blank" rel="noopener noreferrer" className="text-white hover:text-biolegend-yellow transition-colors">
                   <Facebook className="w-6 h-6" />
-                </a>
-                <a href="#" className="text-white hover:text-biolegend-yellow transition-colors">
-                  <Twitter className="w-6 h-6" />
                 </a>
                 <a href="#" className="text-white hover:text-biolegend-yellow transition-colors">
                   <Linkedin className="w-6 h-6" />

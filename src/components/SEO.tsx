@@ -211,13 +211,7 @@ const SEO = ({
       <meta property="og:image" content={`${image.startsWith('http') ? image : `${url}${image}`}`}/>
       <meta property="og:site_name" content="Biolegend Scientific Ltd" />
       
-      {/* Twitter */}
-      <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content={url} />
-      <meta property="twitter:title" content={title} />
-      <meta property="twitter:description" content={description} />
-      <meta property="twitter:image" content={`${image.startsWith('http') ? image : `${url}${image}`}`}/>
-      
+     
       {/* Additional SEO Meta Tags */}
       <meta name="geo.region" content="KE-30" />
       <meta name="geo.placename" content="Nairobi" />
