@@ -41,7 +41,7 @@ const PartnersSection = () => {
       category: "Specialized Solutions",
       partners: [
         { name: "Duchefa Biochemie", description: "Plant tissue culture media and specialized products", specialty: "Culture Media, Growth Regulators, Specialized Chemicals", url: "https://www.duchefa-biochemie.com", internalPath: "/duchefa-biochemie" },
-        { name: "MicroMedica", description: "Dehydrated culture media for clinical, food and environmental microbiology", specialty: "Agar, Broths, Selective Media", url: "https://www.micromedicalabs.com", internalPath: "/micromedica" },
+        { name: "MicroMedica", description: "Dehydrated culture media for clinical, food and environmental microbiology", specialty: "Agar, Broths, Selective Media", url: "https://micromedicalab.com/", internalPath: "/micromedica" },
         { name: "Gerber Instruments", description: "Precision instruments for food and dairy analysis", specialty: "Butyrometers, Lactometers, Dairy Testing", url: "https://www.gerber-instruments.com" },
         { name: "CHMLab Group", description: "Professional laboratory filtration solutions", specialty: "Membrane Filters, Syringe Filters, Filter Papers", url: "https://www.chmlab.com" },
         { name: "Hawach", description: "High-quality filtration products for analytical applications", specialty: "Disposable Filters, Filter Holders, HPLC Filters", url: "https://www.hawach.com" },
