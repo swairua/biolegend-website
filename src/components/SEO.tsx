@@ -14,7 +14,7 @@ const SEO = ({
   title = "Biolegend Scientific Ltd | Laboratory & Life Sciences Products in Kenya",
   description = "Laboratory equipment, water testing, life sciences, microbiology and biotechnology products in Kenya. Authorized partnerships, expert support, and nationwide delivery.",
   keywords = "laboratory supplier Kenya, water testing equipment, life sciences products, microbiology media, Duchefa, MicroMedica, Palintest, scientific instruments, chemicals and reagents",
-  image = "https://cdn.builder.io/api/v1/image/assets%2F6a1f9014ca2549378a149859cedc5ead%2F3a08b35e4e8c4762a6ef27dc2e13d16f",
+  image = "https://cdn.builder.io/api/v1/image/assets%2Fcbe5d68584504715befd11df22888633%2F7ae1ac41b01644408c45b8bf1c19b281?format=webp&width=800",
   url = "https://biolegendscientific.co.ke",
   type = "website",
   schema

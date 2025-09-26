@@ -38,6 +38,14 @@ import GlasswareConsumables from "./pages/services/GlasswareConsumables";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import PartnerPage from "./pages/PartnerPage";
+import Policies from "./pages/Policies";
+import AntiBribery from "./pages/policies/AntiBribery";
+import BusinessContinuity from "./pages/policies/BusinessContinuity";
+import CustomerServicePolicy from "./pages/policies/CustomerService";
+import HealthSafetyEnvironment from "./pages/policies/HealthSafetyEnvironment";
+import EnvironmentalSustainability from "./pages/policies/EnvironmentalSustainability";
+import EthicalPolicy from "./pages/policies/EthicalPolicy";
+import GrievanceMechanism from "./pages/policies/GrievanceMechanism";
 
 const queryClient = new QueryClient();
 
@@ -81,6 +89,15 @@ const App = () => (
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
+            {/* Policies */}
+            <Route path="/policies" element={<Policies />} />
+            <Route path="/policies/anti-bribery" element={<AntiBribery />} />
+            <Route path="/policies/business-continuity" element={<BusinessContinuity />} />
+            <Route path="/policies/customer-service" element={<CustomerServicePolicy />} />
+            <Route path="/policies/health-safety-environment" element={<HealthSafetyEnvironment />} />
+            <Route path="/policies/environmental-sustainability" element={<EnvironmentalSustainability />} />
+            <Route path="/policies/ethical-policy" element={<EthicalPolicy />} />
+            <Route path="/policies/grievance-mechanism" element={<GrievanceMechanism />} />
             {/* Partner Pages */}
             <Route path="/palintest" element={<PartnerPage />} />
             <Route path="/lovibond" element={<PartnerPage />} />

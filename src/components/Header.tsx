@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Menu, X, ChevronDown, ChevronRight, Facebook, Linkedin, Microscope, Droplets, Sprout, Milk, Leaf, Scale, Eye, TestTube, Beaker, Thermometer, Filter, Stethoscope, Shield, FlaskConical, BookOpen } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronRight, Facebook, Linkedin, Microscope, Droplets, Sprout, Milk, Leaf, Scale, Eye, TestTube, Beaker, Thermometer, Filter, Stethoscope, Shield, FlaskConical, BookOpen, ShieldAlert, LifeBuoy, Headset, Megaphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -7,6 +7,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
+  const [isPoliciesOpen, setIsPoliciesOpen] = useState(false);
 
   const services = [
     { name: "Scientific Equipment", slug: "scientific-equipment", icon: <Microscope className="w-4 h-4 text-biolegend-purple"/> },
@@ -37,6 +38,16 @@ const Header = () => {
     { name: "Food and Beverages", slug: "food-beverages", icon: <Beaker className="w-4 h-4 text-amber-700"/> },
     { name: "Research Institutions", slug: "research-institutions", icon: <Microscope className="w-4 h-4 text-biolegend-purple"/> },
     { name: "Environmental & Water", slug: "environmental", icon: <Leaf className="w-4 h-4 text-green-700"/> }
+  ];
+
+  const policies = [
+    { name: "Anti-Bribery & Corruption", slug: "anti-bribery", icon: <ShieldAlert className="w-4 h-4 text-red-600"/> },
+    { name: "Business Continuity Plan", slug: "business-continuity", icon: <LifeBuoy className="w-4 h-4 text-sky-600"/> },
+    { name: "Customer Service", slug: "customer-service", icon: <Headset className="w-4 h-4 text-purple-600"/> },
+    { name: "HSE Policy", slug: "health-safety-environment", icon: <Leaf className="w-4 h-4 text-green-700"/> },
+    { name: "Environmental Sustainability", slug: "environmental-sustainability", icon: <Leaf className="w-4 h-4 text-emerald-700"/> },
+    { name: "Ethical Policy", slug: "ethical-policy", icon: <Scale className="w-4 h-4 text-amber-700"/> },
+    { name: "Grievance Mechanism", slug: "grievance-mechanism", icon: <Megaphone className="w-4 h-4 text-pink-600"/> }
   ];
 
   return (
@@ -163,6 +174,46 @@ const Header = () => {
                   )}
                 </div>
 
+                {/* Policies Dropdown */}
+                <div className="relative">
+                  <button
+                    className="text-foreground hover:text-biolegend-purple font-medium flex items-center transition-colors"
+                    onMouseEnter={() => setIsPoliciesOpen(true)}
+                    onMouseLeave={() => setIsPoliciesOpen(false)}
+                  >
+                    Policies
+                    <ChevronDown className="ml-1 h-4 w-4" />
+                  </button>
+                  {isPoliciesOpen && (
+                    <div
+                      className="absolute top-full right-0 mt-2 w-[640px] bg-white/95 backdrop-blur rounded-xl shadow-elegant border z-50 p-4"
+                      onMouseEnter={() => setIsPoliciesOpen(true)}
+                      onMouseLeave={() => setIsPoliciesOpen(false)}
+                    >
+                      <div className="absolute -top-2 right-10 w-4 h-4 bg-white rotate-45 border-l border-t"></div>
+                      <div className="flex items-center justify-between px-2 pb-3 border-b">
+                        <a href="/policies" className="text-sm font-semibold text-biolegend-purple hover:underline inline-flex items-center">
+                          View All Policies
+                          <ChevronRight className="w-4 h-4 ml-1" />
+                        </a>
+                        <span className="text-xs text-muted-foreground">Company policies</span>
+                      </div>
+                      <div className="pt-3 grid grid-cols-2 lg:grid-cols-2 gap-2">
+                        {policies.map((policy, index) => (
+                          <a
+                            key={index}
+                            href={`/policies/${policy.slug}`}
+                            className="flex items-center gap-2 px-3 py-2 text-sm text-foreground rounded-md hover:bg-biolegend-yellow/10 hover:text-biolegend-purple transition-colors"
+                          >
+                            {policy.icon}
+                            <span className="truncate">{policy.name}</span>
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+
                 <a href="/contact" className="text-foreground hover:text-biolegend-purple font-medium transition-colors">
                   Contact Us
                 </a>
@@ -211,6 +262,19 @@ const Header = () => {
                       className="flex items-center justify-between py-1 text-sm text-muted-foreground hover:text-biolegend-purple pl-4 pr-2"
                     >
                       <span>{industry.name}</span>
+                      <ChevronRight className="w-4 h-4" />
+                    </a>
+                  ))}
+                </div>
+                <div className="px-3 py-2">
+                  <p className="text-biolegend-purple font-semibold mb-2">Policies</p>
+                  {policies.map((policy, index) => (
+                    <a
+                      key={index}
+                      href={`/policies/${policy.slug}`}
+                      className="flex items-center justify-between py-1 text-sm text-muted-foreground hover:text-biolegend-purple pl-4 pr-2"
+                    >
+                      <span>{policy.name}</span>
                       <ChevronRight className="w-4 h-4" />
                     </a>
                   ))}
