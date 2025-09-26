@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Phone, MapPin, Clock, Facebook, Linkedin, MessageCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Facebook, Linkedin, Twitter, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from "@/components/ui/dialog";
@@ -228,11 +228,14 @@ const Footer = () => {
             <div className="mt-8">
               <h5 className="font-semibold mb-4">Follow Us</h5>
               <div className="flex space-x-4">
-                <a href="https://www.facebook.com/biolegendscientific" target="_blank" rel="noopener noreferrer" className="text-white hover:text-biolegend-yellow transition-colors">
+                <a href="https://www.facebook.com/biolegendscientific.co.ke" target="_blank" rel="noopener noreferrer" className="text-white hover:text-biolegend-yellow transition-colors">
                   <Facebook className="w-6 h-6" />
                 </a>
-                <a href="#" className="text-white hover:text-biolegend-yellow transition-colors">
+                <a href="https://www.linkedin.com/in/biolegend-scientific-934b1937b" target="_blank" rel="noopener noreferrer" className="text-white hover:text-biolegend-yellow transition-colors">
                   <Linkedin className="w-6 h-6" />
+                </a>
+                <a href="https://x.com/BIOLEGENDSLTD?t=bsDNtEINWzlYbUk0fv-AqA&s=08" target="_blank" rel="noopener noreferrer" className="text-white hover:text-biolegend-yellow transition-colors">
+                  <Twitter className="w-6 h-6" />
                 </a>
               </div>
             </div>
