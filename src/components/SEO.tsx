@@ -51,7 +51,9 @@ const SEO = ({
         "availableLanguage": "English"
       },
       "sameAs": [
-        "https://www.facebook.com/biolegendscientific",
+        "https://www.facebook.com/biolegendscientific.co.ke",
+        "https://www.linkedin.com/in/biolegend-scientific-934b1937b",
+        "https://x.com/BIOLEGENDSLTD?t=bsDNtEINWzlYbUk0fv-AqA&s=08",
         "https://wa.me/254741207690"
       ]
     };
