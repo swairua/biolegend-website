@@ -37,7 +37,7 @@ const AntiBribery = () => {
                   <li>All officers, employees (full-time, part-time, or temporary), consultants, and contractors ("Personnel").</li>
                   <li>All third parties acting for or on behalf of the Company, including agents, suppliers, distributors, and business partners.</li>
                 </ul>
-                <p className="text-muted-foreground mt-2">All Personnel must confirm that they have read, understood, and will comply with this policy. Third parties may be required to undertake to observe its provisions.</p>
+                <p className="text-muted-foreground mt-2">All Personnel must confirm that they have read, understood, and will comply with this policy. Third parties will be required to undertake to observe its provisions.</p>
               </section>
 
               <section>
