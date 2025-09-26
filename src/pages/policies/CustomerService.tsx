@@ -36,7 +36,7 @@ const CustomerServicePolicy = () => {
                   <li>Offering fair and competitive pricing with integrity and transparency.</li>
                   <li>Providing professional, courteous interactions at all times.</li>
                   <li>Handling inquiries, feedback, and complaints promptly and effectively.</li>
-                  <li>Maintaining strict compliance with ethical standards and values.</li>
+                  <li>Maintaining strict compliance with ethical standards, integrity, and Christian values that guide our company culture.</li>
                 </ul>
               </section>
 
