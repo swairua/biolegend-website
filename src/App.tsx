@@ -39,6 +39,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import PartnerPage from "./pages/PartnerPage";
 import Policies from "./pages/Policies";
+import Employees from "./pages/Employees";
 import AntiBribery from "./pages/policies/AntiBribery";
 import BusinessContinuity from "./pages/policies/BusinessContinuity";
 import CustomerServicePolicy from "./pages/policies/CustomerService";
@@ -87,6 +88,7 @@ const App = () => (
             <Route path="/industries/research-institutions" element={<ResearchInstitutions />} />
             <Route path="/industries/environmental" element={<Environmental />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/employees" element={<Employees />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
             {/* Policies */}
