@@ -144,22 +144,28 @@ const PartnersSection = () => {
               </h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {category.partners.map((partner, partnerIndex) => (
-                  <Card key={partnerIndex} className="group hover:shadow-elegant transition-all duration-300 border-2 hover:border-biolegend-purple/20">
+                  <Card key={partnerIndex} className={`group hover:shadow-elegant transition-all duration-300 border-2 ${partner.isOfficial ? 'border-biolegend-yellow bg-biolegend-yellow/5 hover:border-biolegend-yellow/80' : 'hover:border-biolegend-purple/20'}`}>
                     <CardHeader>
                       <div className="flex items-start justify-between">
                         <div className="flex-1">
-                          <CardTitle className={`text-lg group-hover:text-biolegend-purple transition-colors ${
-                            partner.isOfficial ? 'text-biolegend-purple' : ''
-                          }`}>
-                            {partner.internalPath ? (
-                              <Link to={partner.internalPath} className="hover:underline">
-                                {partner.name}
-                              </Link>
-                            ) : (
-                              <span>{partner.name}</span>
+                          <div className="flex items-start justify-between gap-2 mb-2">
+                            <CardTitle className={`text-lg group-hover:text-biolegend-purple transition-colors ${
+                              partner.isOfficial ? 'text-biolegend-purple' : ''
+                            }`}>
+                              {partner.internalPath ? (
+                                <Link to={partner.internalPath} className="hover:underline">
+                                  {partner.name}
+                                </Link>
+                              ) : (
+                                <span>{partner.name}</span>
+                              )}
+                            </CardTitle>
+                            {partner.isOfficial && (
+                              <Badge variant="secondary" className="bg-biolegend-yellow text-biolegend-purple-dark font-semibold whitespace-nowrap">
+                                Official
+                              </Badge>
                             )}
-                            {partner.isOfficial && " 🇰🇪"}
-                          </CardTitle>
+                          </div>
                           <CardDescription className="text-sm text-muted-foreground">
                             {partner.description}
                           </CardDescription>
