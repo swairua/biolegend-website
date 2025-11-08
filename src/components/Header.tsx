@@ -68,10 +68,7 @@ const Header = () => {
               </a>
             </div>
             <div className="hidden md:block">
-              <Input 
-                placeholder="Search" 
-                className="w-64 bg-white/10 border-white/20 text-white placeholder:text-white/70"
-              />
+              <SearchBox />
             </div>
           </div>
         </div>
