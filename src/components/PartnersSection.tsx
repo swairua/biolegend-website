@@ -118,18 +118,18 @@ const PartnersSection = () => {
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { name: "Palintest", specialty: "Water Testing", experience: "75+ Years", color: "bg-blue-500" },
-              { name: "MicroMedica", specialty: "Microbiology Media", experience: "Dehydrated Media", color: "bg-rose-600" },
-              { name: "Loba Chemie", specialty: "Laboratory Chemicals", experience: "Analytical Reagents", color: "bg-emerald-600" },
-              { name: "Duchefa Biochemie", specialty: "Plant Tissue Culture", experience: "Specialized Media", color: "bg-green-600" }
+              { name: "Palintest", specialty: "Water Testing", experience: "75+ Years", color: "bg-blue-500", isOfficial: true },
+              { name: "Radwag", specialty: "Weighing Equipment", experience: "Official Distributor", color: "bg-purple-600", isOfficial: true },
+              { name: "MicroMedica", specialty: "Microbiology Media", experience: "Dehydrated Media", color: "bg-rose-600", isOfficial: true },
+              { name: "Duchefa Biochemie", specialty: "Plant Tissue Culture", experience: "Specialized Media", color: "bg-green-600", isOfficial: true }
             ].map((partner, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-elegant p-6 text-center hover:shadow-lg transition-shadow">
+              <div key={index} className={`bg-white rounded-lg shadow-elegant p-6 text-center hover:shadow-lg transition-shadow ${partner.isOfficial ? 'border-2 border-biolegend-yellow' : ''}`}>
                 <div className={`w-16 h-16 ${partner.color} rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-4`}>
                   {partner.name.substring(0, 2)}
                 </div>
-                <h4 className="font-bold text-lg mb-2">{partner.name}</h4>
+                <h4 className="font-bold text-lg mb-2">{partner.name} {partner.isOfficial ? '🇰🇪' : ''}</h4>
                 <p className="text-biolegend-purple font-semibold text-sm mb-1">{partner.specialty}</p>
-                <p className="text-muted-foreground text-xs">{partner.experience}</p>
+                <p className={`text-xs ${partner.isOfficial ? 'text-biolegend-yellow font-semibold' : 'text-muted-foreground'}`}>{partner.experience}</p>
               </div>
             ))}
           </div>
