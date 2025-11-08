@@ -234,11 +234,11 @@ const Header = () => {
             <div className="xl:hidden">
               <Button
                 variant="ghost"
-                size="sm"
+                size="lg"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-foreground hover:text-biolegend-purple"
+                className="text-foreground hover:text-biolegend-purple hover:bg-biolegend-yellow/10 transition-colors p-2 sm:p-3"
               >
-                {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                {isMenuOpen ? <X className="h-6 w-6 sm:h-7 sm:w-7" /> : <Menu className="h-6 w-6 sm:h-7 sm:w-7" />}
               </Button>
             </div>
           </div>
