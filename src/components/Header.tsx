@@ -245,57 +245,57 @@ const Header = () => {
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <div className="xl:hidden">
-              <div className="px-4 pt-4 pb-3 border-b">
+            <div className="xl:hidden bg-white border-t max-h-[calc(100vh-200px)] overflow-y-auto">
+              <div className="px-3 sm:px-4 pt-3 sm:pt-4 pb-3 border-b">
                 <SearchBox onMobile={true} />
               </div>
-              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t">
-                <a href="#home" className="block px-3 py-2 text-foreground hover:text-biolegend-purple font-medium">
+              <div className="px-2 sm:px-3 pt-2 pb-3 space-y-1">
+                <a href="#home" className="block px-3 py-2 text-sm sm:text-base text-foreground hover:text-biolegend-purple hover:bg-biolegend-yellow/10 rounded font-medium transition-colors">
                   Home
                 </a>
                 <div className="px-3 py-2">
-                  <p className="text-biolegend-purple font-semibold mb-2">Services</p>
+                  <p className="text-xs sm:text-sm text-biolegend-purple font-semibold mb-2">Services</p>
                   {services.map((service, index) => (
                     <a
                       key={index}
                       href={`/services/${service.slug}`}
-                      className="flex items-center justify-between py-1 text-sm text-muted-foreground hover:text-biolegend-purple pl-4 pr-2"
+                      className="flex items-center justify-between py-1.5 sm:py-2 text-xs sm:text-sm text-muted-foreground hover:text-biolegend-purple hover:bg-biolegend-yellow/5 rounded pl-4 pr-2 transition-colors"
                     >
-                      <span>{service.name}</span>
-                      <ChevronRight className="w-4 h-4" />
+                      <span className="truncate">{service.name}</span>
+                      <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0 ml-2" />
                     </a>
                   ))}
                 </div>
                 <div className="px-3 py-2">
-                  <p className="text-biolegend-purple font-semibold mb-2">Industries</p>
+                  <p className="text-xs sm:text-sm text-biolegend-purple font-semibold mb-2">Industries</p>
                   {industries.map((industry, index) => (
                     <a
                       key={index}
                       href={`/industries/${industry.slug}`}
-                      className="flex items-center justify-between py-1 text-sm text-muted-foreground hover:text-biolegend-purple pl-4 pr-2"
+                      className="flex items-center justify-between py-1.5 sm:py-2 text-xs sm:text-sm text-muted-foreground hover:text-biolegend-purple hover:bg-biolegend-yellow/5 rounded pl-4 pr-2 transition-colors"
                     >
-                      <span>{industry.name}</span>
-                      <ChevronRight className="w-4 h-4" />
+                      <span className="truncate">{industry.name}</span>
+                      <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0 ml-2" />
                     </a>
                   ))}
                 </div>
                 <div className="px-3 py-2">
-                  <p className="text-biolegend-purple font-semibold mb-2">Policies</p>
+                  <p className="text-xs sm:text-sm text-biolegend-purple font-semibold mb-2">Policies</p>
                   {policies.map((policy, index) => (
                     <a
                       key={index}
                       href={`/policies/${policy.slug}`}
-                      className="flex items-center justify-between py-1 text-sm text-muted-foreground hover:text-biolegend-purple pl-4 pr-2"
+                      className="flex items-center justify-between py-1.5 sm:py-2 text-xs sm:text-sm text-muted-foreground hover:text-biolegend-purple hover:bg-biolegend-yellow/5 rounded pl-4 pr-2 transition-colors"
                     >
-                      <span>{policy.name}</span>
-                      <ChevronRight className="w-4 h-4" />
+                      <span className="truncate">{policy.name}</span>
+                      <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0 ml-2" />
                     </a>
                   ))}
                 </div>
-                <a href="/employees" className="block px-3 py-2 text-foreground hover:text-biolegend-purple font-medium">
+                <a href="/employees" className="block px-3 py-2 text-sm sm:text-base text-foreground hover:text-biolegend-purple hover:bg-biolegend-yellow/10 rounded font-medium transition-colors">
                   Employees
                 </a>
-                <a href="#contact" className="block px-3 py-2 text-foreground hover:text-biolegend-purple font-medium">
+                <a href="/contact" className="block px-3 py-2 text-sm sm:text-base text-foreground hover:text-biolegend-purple hover:bg-biolegend-yellow/10 rounded font-medium transition-colors">
                   Contact Us
                 </a>
               </div>
