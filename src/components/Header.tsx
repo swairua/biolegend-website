@@ -77,18 +77,18 @@ const Header = () => {
       {/* Main Navigation */}
       <nav className="bg-white/80 backdrop-blur-md supports-[backdrop-filter]:bg-white/70">
         <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
-          <div className="flex justify-between items-center min-h-24 md:min-h-28 py-2">
+          <div className="flex justify-between items-center min-h-16 sm:min-h-20 md:min-h-24 lg:min-h-28 py-2 sm:py-3">
             {/* Logo and Badge */}
-            <div className="flex-shrink-0 flex items-center gap-1 sm:gap-2 md:gap-3">
+            <div className="flex-shrink-0 flex items-center gap-0.5 sm:gap-1 md:gap-2 lg:gap-3">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2Fcbe5d68584504715befd11df22888633%2F7ae1ac41b01644408c45b8bf1c19b281?format=webp&width=800"
                 alt="Biolegend Scientific Ltd Logo"
-                className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto"
+                className="h-14 sm:h-20 md:h-24 lg:h-28 xl:h-32 w-auto"
               />
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2Faee07e33c3354ccd83e0e92fa61665d5%2F4efb80e3f5de43e69f57164afd0d9fe3?format=webp&width=800"
                 alt="Corruption Free - A Certified Blue Company Member"
-                className="h-24 sm:h-28 md:h-32 lg:h-36 w-auto"
+                className="h-16 sm:h-24 md:h-28 lg:h-32 xl:h-36 w-auto"
                 title="Certified Blue Company - Corruption Free Member"
               />
             </div>
