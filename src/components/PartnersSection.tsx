@@ -9,6 +9,9 @@ const PartnersSection = () => {
     {
       category: "Scientific Equipment",
       partners: [
+        { name: "🇰🇪 Radwag", description: "Official Distributor in Kenya - Leading manufacturer of analytical balances and weighing equipment", specialty: "Analytical Balances, Precision Weighing, Laboratory Scales", url: "https://radwag.com", internalPath: "/radwag", isOfficial: true },
+        { name: "🇰🇪 Bioendo", description: "Official Distributor in Kenya - Specialized supplier of medical, dental, and laboratory equipment", specialty: "Medical Equipment, Dental Equipment, Laboratory Supplies", url: "https://bioendo.co.ke", internalPath: "/bioendo", isOfficial: true },
+        { name: "🇰🇪 MicroLab Scientific", description: "Official Distributor in Kenya - Comprehensive supplier of laboratory equipment and scientific instruments", specialty: "Microscopes, Laboratory Equipment, Analytical Instruments", url: "https://microlabscientific.co.ke", internalPath: "/microlab-scientific", isOfficial: true },
         { name: "Labtron", description: "Advanced laboratory equipment and instrumentation", specialty: "Centrifuges, Incubators, Autoclaves", url: "https://www.labtron.com" },
         { name: "Draglab Technologies", description: "Cutting-edge laboratory instruments and automation", specialty: "Digital Equipment, Laboratory Software", url: "https://www.drag-lab.de/EN/" },
         { name: "Hongshun Medical Instrument", description: "Medical and laboratory instrumentation", specialty: "Medical Devices, Diagnostic Equipment", url: "https://www.asian-medical.com" },
@@ -20,11 +23,11 @@ const PartnersSection = () => {
     {
       category: "Water Testing & Analysis",
       partners: [
-        { name: "Palintest", description: "🇰🇪 Official Distributor in Kenya - Global leader in water testing with over 75 years of experience", specialty: "Photometers, Test Kits, Pool Testing, Authorized Dealer", url: "https://www.palintest.com", internalPath: "/palintest", isOfficial: true },
-        { name: "Lovibond", description: "Precision color measurement and water analysis solutions", specialty: "Color Measurement, Water Analysis", url: "https://www.lovibond.com", internalPath: "/lovibond" },
+        { name: "🇰🇪 Palintest", description: "Official Distributor in Kenya - Global leader in water testing with over 75 years of experience", specialty: "Photometers, Test Kits, Pool Testing, Authorized Dealer", url: "https://www.palintest.com", internalPath: "/palintest", isOfficial: true },
+        { name: "🇰🇪 Lovibond", description: "Official Distributor in Kenya - Precision color measurement and water analysis solutions", specialty: "Color Measurement, Water Analysis, Portable Equipment", url: "https://www.lovibond.com", internalPath: "/lovibond", isOfficial: true },
+        { name: "🇰🇪 Hanna Instruments", description: "Official Distributor in Kenya - Analytical instrumentation for laboratory and field testing", specialty: "pH Meters, EC Meters, Multi-parameter Testers", url: "https://www.hannainst.com", internalPath: "/hanna-instruments", isOfficial: true },
         { name: "Delagua", description: "Water quality testing solutions for developing regions", specialty: "Field Testing, Emergency Response", url: "https://www.delagua.org" },
-        { name: "Wagtech", description: "Portable water testing technology for field applications", specialty: "Portable Kits, Digital Testing", url: "https://www.wagtech.co.uk" },
-        { name: "Hannah Instruments", description: "Analytical instrumentation for laboratory and field testing", specialty: "pH Meters, EC Meters, Multi-parameter Testers", url: "https://www.hannainst.com", internalPath: "/hanna-instruments" }
+        { name: "Wagtech", description: "Portable water testing technology for field applications", specialty: "Portable Kits, Digital Testing", url: "https://www.wagtech.co.uk" }
       ]
     },
     {
@@ -40,8 +43,8 @@ const PartnersSection = () => {
     {
       category: "Specialized Solutions",
       partners: [
-        { name: "Duchefa Biochemie", description: "Plant tissue culture media and specialized products", specialty: "Culture Media, Growth Regulators, Specialized Chemicals", url: "https://www.duchefa-biochemie.com", internalPath: "/duchefa-biochemie" },
-        { name: "MicroMedica", description: "Dehydrated culture media for clinical, food and environmental microbiology", specialty: "Agar, Broths, Selective Media", url: "https://micromedicalab.com/", internalPath: "/micromedica" },
+        { name: "🇰🇪 Duchefa Biochemie", description: "Official Distributor in Kenya - Plant tissue culture media and specialized products", specialty: "Culture Media, Growth Regulators, Specialized Chemicals", url: "https://www.duchefa-biochemie.com", internalPath: "/duchefa-biochemie", isOfficial: true },
+        { name: "🇰🇪 MicroMedica", description: "Official Distributor in Kenya - Dehydrated culture media for clinical, food and environmental microbiology", specialty: "Agar, Broths, Selective Media", url: "https://micromedicalab.com/", internalPath: "/micromedica", isOfficial: true },
         { name: "Gerber Instruments", description: "Precision instruments for food and dairy analysis", specialty: "Butyrometers, Lactometers, Dairy Testing", url: "https://www.gerber-instruments.com" },
         { name: "CHMLab Group", description: "Professional laboratory filtration solutions", specialty: "Membrane Filters, Syringe Filters, Filter Papers", url: "https://www.chmlab.com" },
         { name: "Hawach", description: "High-quality filtration products for analytical applications", specialty: "Disposable Filters, Filter Holders, HPLC Filters", url: "https://www.hawach.com" },
@@ -115,18 +118,18 @@ const PartnersSection = () => {
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { name: "Palintest", specialty: "Water Testing", experience: "75+ Years", color: "bg-blue-500" },
-              { name: "MicroMedica", specialty: "Microbiology Media", experience: "Dehydrated Media", color: "bg-rose-600" },
-              { name: "Loba Chemie", specialty: "Laboratory Chemicals", experience: "Analytical Reagents", color: "bg-emerald-600" },
-              { name: "Duchefa Biochemie", specialty: "Plant Tissue Culture", experience: "Specialized Media", color: "bg-green-600" }
+              { name: "Palintest", specialty: "Water Testing", experience: "75+ Years", color: "bg-blue-500", isOfficial: true },
+              { name: "Radwag", specialty: "Weighing Equipment", experience: "Official Distributor", color: "bg-purple-600", isOfficial: true },
+              { name: "MicroMedica", specialty: "Microbiology Media", experience: "Dehydrated Media", color: "bg-rose-600", isOfficial: true },
+              { name: "Duchefa Biochemie", specialty: "Plant Tissue Culture", experience: "Specialized Media", color: "bg-green-600", isOfficial: true }
             ].map((partner, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-elegant p-6 text-center hover:shadow-lg transition-shadow">
+              <div key={index} className={`bg-white rounded-lg shadow-elegant p-6 text-center hover:shadow-lg transition-shadow ${partner.isOfficial ? 'border-2 border-biolegend-yellow' : ''}`}>
                 <div className={`w-16 h-16 ${partner.color} rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-4`}>
                   {partner.name.substring(0, 2)}
                 </div>
-                <h4 className="font-bold text-lg mb-2">{partner.name}</h4>
+                <h4 className="font-bold text-lg mb-2">{partner.name} {partner.isOfficial ? '🇰🇪' : ''}</h4>
                 <p className="text-biolegend-purple font-semibold text-sm mb-1">{partner.specialty}</p>
-                <p className="text-muted-foreground text-xs">{partner.experience}</p>
+                <p className={`text-xs ${partner.isOfficial ? 'text-biolegend-yellow font-semibold' : 'text-muted-foreground'}`}>{partner.experience}</p>
               </div>
             ))}
           </div>
@@ -141,22 +144,28 @@ const PartnersSection = () => {
               </h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {category.partners.map((partner, partnerIndex) => (
-                  <Card key={partnerIndex} className="group hover:shadow-elegant transition-all duration-300 border-2 hover:border-biolegend-purple/20">
+                  <Card key={partnerIndex} className={`group hover:shadow-elegant transition-all duration-300 border-2 ${partner.isOfficial ? 'border-biolegend-yellow bg-biolegend-yellow/5 hover:border-biolegend-yellow/80' : 'hover:border-biolegend-purple/20'}`}>
                     <CardHeader>
                       <div className="flex items-start justify-between">
                         <div className="flex-1">
-                          <CardTitle className={`text-lg group-hover:text-biolegend-purple transition-colors ${
-                            partner.isOfficial ? 'text-biolegend-purple' : ''
-                          }`}>
-                            {partner.internalPath ? (
-                              <Link to={partner.internalPath} className="hover:underline">
-                                {partner.name}
-                              </Link>
-                            ) : (
-                              <span>{partner.name}</span>
+                          <div className="flex items-start justify-between gap-2 mb-2">
+                            <CardTitle className={`text-lg group-hover:text-biolegend-purple transition-colors ${
+                              partner.isOfficial ? 'text-biolegend-purple' : ''
+                            }`}>
+                              {partner.internalPath ? (
+                                <Link to={partner.internalPath} className="hover:underline">
+                                  {partner.name}
+                                </Link>
+                              ) : (
+                                <span>{partner.name}</span>
+                              )}
+                            </CardTitle>
+                            {partner.isOfficial && (
+                              <Badge variant="secondary" className="bg-biolegend-yellow text-biolegend-purple-dark font-semibold whitespace-nowrap">
+                                Official
+                              </Badge>
                             )}
-                            {partner.isOfficial && " 🇰🇪"}
-                          </CardTitle>
+                          </div>
                           <CardDescription className="text-sm text-muted-foreground">
                             {partner.description}
                           </CardDescription>

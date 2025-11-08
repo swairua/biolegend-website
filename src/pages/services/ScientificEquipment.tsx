@@ -5,9 +5,31 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 const ScientificEquipment = () => {
   const partners = [
+    {
+      name: "🇰🇪 Radwag",
+      description: "Official Distributor in Kenya - Leading manufacturer of analytical balances and weighing equipment",
+      specialties: ["Analytical Balances", "Precision Weighing", "Laboratory Scales", "Industrial Balances"],
+      website: "https://radwag.com",
+      isOfficialDistributor: true
+    },
+    {
+      name: "🇰🇪 Bioendo",
+      description: "Official Distributor in Kenya - Specialized supplier of medical, dental, and laboratory equipment",
+      specialties: ["Medical Equipment", "Dental Equipment", "Laboratory Supplies", "Sterilization Equipment"],
+      website: "https://bioendo.co.ke",
+      isOfficialDistributor: true
+    },
+    {
+      name: "🇰🇪 MicroLab Scientific",
+      description: "Official Distributor in Kenya - Comprehensive supplier of laboratory equipment and scientific instruments",
+      specialties: ["Microscopes", "Laboratory Equipment", "Analytical Instruments", "Consumables"],
+      website: "https://microlabscientific.co.ke",
+      isOfficialDistributor: true
+    },
     {
       name: "Labtron",
       description: "Advanced laboratory equipment for scientific research and analysis",
@@ -163,11 +185,18 @@ const ScientificEquipment = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {partners.map((partner, index) => (
-                <Card key={index} className="group hover:shadow-elegant transition-all duration-300 border-2 hover:border-biolegend-purple/20">
+                <Card key={index} className={`group hover:shadow-elegant transition-all duration-300 border-2 ${partner.isOfficialDistributor ? 'border-biolegend-yellow bg-biolegend-yellow/5 hover:border-biolegend-yellow/80' : 'hover:border-biolegend-purple/20'}`}>
                   <CardHeader>
-                    <CardTitle className="text-xl group-hover:text-biolegend-purple transition-colors">
-                      {partner.name}
-                    </CardTitle>
+                    <div className="flex items-start justify-between gap-2">
+                      <CardTitle className="text-xl group-hover:text-biolegend-purple transition-colors flex-1">
+                        {partner.name}
+                      </CardTitle>
+                      {partner.isOfficialDistributor && (
+                        <Badge variant="secondary" className="bg-biolegend-yellow text-biolegend-purple-dark font-semibold whitespace-nowrap">
+                          Official Distributor
+                        </Badge>
+                      )}
+                    </div>
                     <CardDescription className="text-muted-foreground">
                       {partner.description}
                     </CardDescription>
@@ -186,7 +215,7 @@ const ScientificEquipment = () => {
                       </div>
                       <Button
                         onClick={() => window.open(partner.website, '_blank')}
-                        className="w-full bg-biolegend-purple hover:bg-biolegend-purple/90"
+                        className={`w-full ${partner.isOfficialDistributor ? 'bg-biolegend-yellow text-biolegend-purple hover:bg-biolegend-yellow/90' : 'bg-biolegend-purple hover:bg-biolegend-purple/90'}`}
                       >
                         <ExternalLink className="w-4 h-4 mr-2" />
                         Visit Website

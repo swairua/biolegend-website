@@ -40,11 +40,63 @@ export const actualSuppliers: EnhancedSupplier[] = [
     category: "Water Testing & Analysis",
     isOfficialDistributor: true
   },
+  {
+    id: "radwag",
+    name: "Radwag",
+    description: "🇰🇪 Official Distributor in Kenya - Leading manufacturer of analytical balances and weighing equipment for laboratory and industrial applications",
+    specialties: ["Analytical Balances", "Precision Weighing", "Laboratory Scales", "Industrial Balances"],
+    logo: "https://radwag.com/en/logo.svg",
+    image: "https://radwag.com/images/hero.jpg",
+    websiteUrl: "https://radwag.com",
+    productCatalogUrl: "https://radwag.com/en/products",
+    contactInfo: {
+      email: "info@radwag.com"
+    },
+    certification: ["ISO 9001", "CE Marking"],
+    established: 1981,
+    countries: ["Poland", "Kenya", "Global"],
+    category: "Scientific Equipment",
+    isOfficialDistributor: true
+  },
+  {
+    id: "bioendo",
+    name: "Bioendo",
+    description: "🇰🇪 Official Distributor in Kenya - Specialized supplier of medical, dental, and laboratory equipment",
+    specialties: ["Medical Equipment", "Dental Equipment", "Laboratory Supplies", "Sterilization Equipment"],
+    logo: "https://images.pexels.com/photos/9243571/pexels-photo-9243571.jpeg?auto=compress&cs=tinysrgb&w=100&h=60&fit=crop",
+    image: "https://images.pexels.com/photos/9243571/pexels-photo-9243571.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop",
+    websiteUrl: "https://bioendo.co.ke",
+    contactInfo: {
+      email: "info@bioendo.co.ke"
+    },
+    certification: ["ISO 9001"],
+    established: 2005,
+    countries: ["Kenya", "East Africa"],
+    category: "Scientific Equipment",
+    isOfficialDistributor: true
+  },
+  {
+    id: "microlab-scientific",
+    name: "MicroLab Scientific",
+    description: "🇰🇪 Official Distributor in Kenya - Comprehensive supplier of laboratory equipment and scientific instruments",
+    specialties: ["Microscopes", "Laboratory Equipment", "Analytical Instruments", "Consumables"],
+    logo: "https://images.pexels.com/photos/9574411/pexels-photo-9574411.jpeg?auto=compress&cs=tinysrgb&w=100&h=60&fit=crop",
+    image: "https://images.pexels.com/photos/9574411/pexels-photo-9574411.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop",
+    websiteUrl: "https://microlabscientific.co.ke",
+    contactInfo: {
+      email: "info@microlabscientific.co.ke"
+    },
+    certification: ["ISO 9001"],
+    established: 2008,
+    countries: ["Kenya"],
+    category: "Scientific Equipment",
+    isOfficialDistributor: true
+  },
   // Plant Tissue Culture & Microbiology
   {
     id: "duchefa-biochemie",
     name: "Duchefa Biochemie",
-    description: "Plant tissue culture media, growth regulators, and specialized biochemicals for plant biotechnology",
+    description: "🇰🇪 Official Distributor in Kenya - Plant tissue culture media, growth regulators, and specialized biochemicals for plant biotechnology",
     specialties: ["Culture Media", "Growth Regulators", "Plant Biotechnology"],
     logo: "https://images.unsplash.com/photo-1583484963880-5ec7c86d69d4?w=200&h=100&fit=crop&crop=center",
     image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=800&h=400&fit=crop&crop=center",
@@ -56,23 +108,25 @@ export const actualSuppliers: EnhancedSupplier[] = [
     certification: ["ISO 9001"],
     established: 1960,
     countries: ["Netherlands", "Global"],
-    category: "Biotechnology & Plant Tissue Culture"
+    category: "Biotechnology & Plant Tissue Culture",
+    isOfficialDistributor: true
   },
   {
     id: "micromedica",
     name: "MicroMedica Laboratories",
-    description: "Dehydrated culture media and microbiology products for clinical, food, and environmental testing",
+    description: "🇰🇪 Official Distributor in Kenya - Dehydrated culture media and microbiology products for clinical, food, and environmental testing",
     specialties: ["Dehydrated Media", "Agar & Broths", "Selective Media"],
     logo: "https://micromedicalab.com/wp-content/uploads/2023/05/logo-1.png",
     image: "https://micromedicalab.com/wp-content/uploads/2023/05/banner-1.jpg",
     websiteUrl: "https://micromedicalab.com/",
     contactInfo: {},
-    category: "Microbiology & Pathology"
+    category: "Microbiology & Pathology",
+    isOfficialDistributor: true
   },
   {
     id: "lovibond",
     name: "Lovibond",
-    description: "Precision color measurement and water analysis solutions",
+    description: "🇰🇪 Official Distributor in Kenya - Precision color measurement and water analysis solutions",
     specialties: ["Color Measurement", "Water Analysis", "Portable Equipment"],
     logo: "https://images.pexels.com/photos/6823493/pexels-photo-6823493.jpeg?auto=compress&cs=tinysrgb&w=100&h=60&fit=crop",
     image: "https://images.pexels.com/photos/6823493/pexels-photo-6823493.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop",
@@ -85,12 +139,13 @@ export const actualSuppliers: EnhancedSupplier[] = [
     certification: ["ISO 9001", "ISO 14001"],
     established: 1885,
     countries: ["Germany", "UK", "USA", "China"],
-    category: "Water Testing & Analysis"
+    category: "Water Testing & Analysis",
+    isOfficialDistributor: true
   },
   {
     id: "hanna-instruments",
     name: "Hanna Instruments",
-    description: "Analytical instrumentation for laboratory and field testing",
+    description: "🇰🇪 Official Distributor in Kenya - Analytical instrumentation for laboratory and field testing",
     specialties: ["pH Meters", "EC Meters", "Multi-parameter Testers"],
     logo: "https://images.pexels.com/photos/8392542/pexels-photo-8392542.jpeg?auto=compress&cs=tinysrgb&w=100&h=60&fit=crop",
     image: "https://images.pexels.com/photos/8392542/pexels-photo-8392542.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop",
@@ -101,7 +156,8 @@ export const actualSuppliers: EnhancedSupplier[] = [
     },
     established: 1978,
     countries: ["Italy", "USA", "Global"],
-    category: "Water Testing & Analysis"
+    category: "Water Testing & Analysis",
+    isOfficialDistributor: true
   },
 
   // Chemicals & Reagents Partners
