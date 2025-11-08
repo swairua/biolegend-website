@@ -91,7 +91,7 @@ const Header = () => {
               <img
                 src="/blue-company-badge.svg"
                 alt="Corruption Free - A Certified Blue Company Member"
-                className="h-20 md:h-24 w-auto"
+                className="h-32 md:h-36 w-auto"
                 title="Certified Blue Company - Corruption Free Member"
               />
             </div>
