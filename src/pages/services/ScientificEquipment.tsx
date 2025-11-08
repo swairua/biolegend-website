@@ -9,6 +9,27 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 const ScientificEquipment = () => {
   const partners = [
     {
+      name: "🇰🇪 Radwag",
+      description: "Official Distributor in Kenya - Leading manufacturer of analytical balances and weighing equipment",
+      specialties: ["Analytical Balances", "Precision Weighing", "Laboratory Scales", "Industrial Balances"],
+      website: "https://radwag.com",
+      isOfficialDistributor: true
+    },
+    {
+      name: "🇰🇪 Bioendo",
+      description: "Official Distributor in Kenya - Specialized supplier of medical, dental, and laboratory equipment",
+      specialties: ["Medical Equipment", "Dental Equipment", "Laboratory Supplies", "Sterilization Equipment"],
+      website: "https://bioendo.co.ke",
+      isOfficialDistributor: true
+    },
+    {
+      name: "🇰🇪 MicroLab Scientific",
+      description: "Official Distributor in Kenya - Comprehensive supplier of laboratory equipment and scientific instruments",
+      specialties: ["Microscopes", "Laboratory Equipment", "Analytical Instruments", "Consumables"],
+      website: "https://microlabscientific.co.ke",
+      isOfficialDistributor: true
+    },
+    {
       name: "Labtron",
       description: "Advanced laboratory equipment for scientific research and analysis",
       specialties: ["Centrifuges", "Incubators", "Autoclaves", "Shakers", "Heating Equipment"],
