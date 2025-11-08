@@ -126,7 +126,7 @@ export const actualSuppliers: EnhancedSupplier[] = [
   {
     id: "lovibond",
     name: "Lovibond",
-    description: "Precision color measurement and water analysis solutions",
+    description: "🇰🇪 Official Distributor in Kenya - Precision color measurement and water analysis solutions",
     specialties: ["Color Measurement", "Water Analysis", "Portable Equipment"],
     logo: "https://images.pexels.com/photos/6823493/pexels-photo-6823493.jpeg?auto=compress&cs=tinysrgb&w=100&h=60&fit=crop",
     image: "https://images.pexels.com/photos/6823493/pexels-photo-6823493.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop",
@@ -139,12 +139,13 @@ export const actualSuppliers: EnhancedSupplier[] = [
     certification: ["ISO 9001", "ISO 14001"],
     established: 1885,
     countries: ["Germany", "UK", "USA", "China"],
-    category: "Water Testing & Analysis"
+    category: "Water Testing & Analysis",
+    isOfficialDistributor: true
   },
   {
     id: "hanna-instruments",
     name: "Hanna Instruments",
-    description: "Analytical instrumentation for laboratory and field testing",
+    description: "🇰🇪 Official Distributor in Kenya - Analytical instrumentation for laboratory and field testing",
     specialties: ["pH Meters", "EC Meters", "Multi-parameter Testers"],
     logo: "https://images.pexels.com/photos/8392542/pexels-photo-8392542.jpeg?auto=compress&cs=tinysrgb&w=100&h=60&fit=crop",
     image: "https://images.pexels.com/photos/8392542/pexels-photo-8392542.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop",
@@ -155,7 +156,8 @@ export const actualSuppliers: EnhancedSupplier[] = [
     },
     established: 1978,
     countries: ["Italy", "USA", "Global"],
-    category: "Water Testing & Analysis"
+    category: "Water Testing & Analysis",
+    isOfficialDistributor: true
   },
 
   // Chemicals & Reagents Partners
