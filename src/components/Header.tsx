@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Menu, X, ChevronDown, ChevronRight, Facebook, Linkedin, Twitter, Microscope, Droplets, Sprout, Milk, Leaf, Scale, Eye, TestTube, Beaker, Thermometer, Filter, Stethoscope, Shield, FlaskConical, BookOpen, ShieldAlert, LifeBuoy, Headset, Megaphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import SearchBox from "@/components/SearchBox";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -68,10 +68,7 @@ const Header = () => {
               </a>
             </div>
             <div className="hidden md:block">
-              <Input 
-                placeholder="Search" 
-                className="w-64 bg-white/10 border-white/20 text-white placeholder:text-white/70"
-              />
+              <SearchBox />
             </div>
           </div>
         </div>
@@ -249,6 +246,9 @@ const Header = () => {
           {/* Mobile Navigation */}
           {isMenuOpen && (
             <div className="lg:hidden">
+              <div className="px-4 pt-4 pb-3 border-b">
+                <SearchBox onMobile={true} />
+              </div>
               <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t">
                 <a href="#home" className="block px-3 py-2 text-foreground hover:text-biolegend-purple font-medium">
                   Home
