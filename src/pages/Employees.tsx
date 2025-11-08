@@ -289,22 +289,6 @@ const Employees = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-8">
               <EmployeeProfile
-                name={drCharlesKireru.name}
-                title={drCharlesKireru.title}
-                specialization={drCharlesKireru.specialization}
-                email={drCharlesKireru.email}
-                phone={drCharlesKireru.phone}
-                address={drCharlesKireru.address}
-                profileSummary={drCharlesKireru.profileSummary}
-                coreCompetencies={drCharlesKireru.coreCompetencies}
-                valueProposition={drCharlesKireru.valueProposition}
-                experiences={drCharlesKireru.experiences}
-                education={drCharlesKireru.education}
-                certifications={drCharlesKireru.certifications}
-                membershipsCertifications={drCharlesKireru.membershipsCertifications}
-              />
-
-              <EmployeeProfile
                 name={samuelWaithaka.name}
                 title={samuelWaithaka.title}
                 specialization={samuelWaithaka.specialization}
@@ -318,6 +302,22 @@ const Employees = () => {
                 certifications={samuelWaithaka.certifications}
                 professionalAttributes={samuelWaithaka.professionalAttributes}
                 selectedProjects={samuelWaithaka.selectedProjects}
+              />
+
+              <EmployeeProfile
+                name={drCharlesKireru.name}
+                title={drCharlesKireru.title}
+                specialization={drCharlesKireru.specialization}
+                email={drCharlesKireru.email}
+                phone={drCharlesKireru.phone}
+                address={drCharlesKireru.address}
+                profileSummary={drCharlesKireru.profileSummary}
+                coreCompetencies={drCharlesKireru.coreCompetencies}
+                valueProposition={drCharlesKireru.valueProposition}
+                experiences={drCharlesKireru.experiences}
+                education={drCharlesKireru.education}
+                certifications={drCharlesKireru.certifications}
+                membershipsCertifications={drCharlesKireru.membershipsCertifications}
               />
             </div>
           </div>
