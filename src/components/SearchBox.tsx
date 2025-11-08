@@ -161,7 +161,7 @@ const SearchBox = ({ className = '', onMobile = false }: SearchBoxProps) => {
 
             return (
               <div key={category}>
-                <div className="px-4 py-2 bg-gray-50 border-b border-gray-100">
+                <div className="px-3 sm:px-4 py-2 bg-gray-50 border-b border-gray-100">
                   <p className="text-xs font-semibold text-gray-600 uppercase tracking-wide">
                     {category}s
                   </p>
