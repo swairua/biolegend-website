@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Microscope, FlaskConical, TestTube } from "lucide-react";
+import { ArrowRight, Microscope, FlaskConical, TestTube, Award } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
