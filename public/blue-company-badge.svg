@@ -1,0 +1,44 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Blue background -->
+  <rect width="400" height="400" fill="#0052A3"/>
+  
+  <!-- Outer circle -->
+  <circle cx="200" cy="200" r="180" fill="none" stroke="white" stroke-width="8"/>
+  
+  <!-- Inner circle -->
+  <circle cx="200" cy="200" r="160" fill="none" stroke="white" stroke-width="4"/>
+  
+  <!-- White banner box -->
+  <rect x="80" y="140" width="240" height="120" fill="white" stroke="white" stroke-width="3"/>
+  
+  <!-- Main text -->
+  <text x="200" y="185" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#0052A3" text-anchor="middle">A CERTIFIED</text>
+  <text x="200" y="230" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#0052A3" text-anchor="middle">BLUE COMPANY</text>
+  
+  <!-- Top arc text: CORRUPTION FREE -->
+  <defs>
+    <path id="topArc" d="M 80,200 A 120,120 0 0,1 320,200" fill="none"/>
+  </defs>
+  <text font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" letter-spacing="3">
+    <textPath href="#topArc" startOffset="50%" text-anchor="middle">
+      CORRUPTION FREE
+    </textPath>
+  </text>
+  
+  <!-- Bottom arc text: MEMBER -->
+  <defs>
+    <path id="bottomArc" d="M 320,200 A 120,120 0 0,1 80,200" fill="none"/>
+  </defs>
+  <text font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" letter-spacing="2">
+    <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">
+      MEMBER
+    </textPath>
+  </text>
+  
+  <!-- Decorative diamond shapes -->
+  <g fill="white">
+    <polygon points="200,320 205,330 200,340 195,330" />
+    <polygon points="140,340 145,350 140,360 135,350" />
+    <polygon points="260,340 265,350 260,360 255,350" />
+  </g>
+</svg>
