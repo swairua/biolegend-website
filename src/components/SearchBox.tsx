@@ -119,7 +119,7 @@ const SearchBox = ({ className = '', onMobile = false }: SearchBoxProps) => {
   return (
     <div ref={searchRef} className={`relative ${className}`}>
       <div className="relative group">
-        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white/70 pointer-events-none" />
+        <Search className="absolute left-2 sm:left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white/70 pointer-events-none flex-shrink-0" />
         <input
           ref={inputRef}
           type="text"
@@ -127,10 +127,10 @@ const SearchBox = ({ className = '', onMobile = false }: SearchBoxProps) => {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onFocus={() => query && setIsOpen(true)}
-          className={`${onMobile ? 'w-full' : 'w-64'} bg-white/10 border border-white/20 text-white placeholder:text-white/70 rounded-lg pl-10 pr-10 py-2 transition-all focus:outline-none focus:border-white/40 focus:bg-white/15`}
+          className={`${onMobile ? 'w-full' : 'w-48 sm:w-56 md:w-64'} bg-white/10 border border-white/20 text-white text-sm sm:text-base placeholder:text-white/70 rounded-lg pl-8 sm:pl-10 pr-8 sm:pr-10 py-1.5 sm:py-2 transition-all focus:outline-none focus:border-white/40 focus:bg-white/15`}
         />
         {!onMobile && !query && (
-          <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
+          <div className="absolute right-2 sm:right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
             <kbd className="hidden group-hover:block text-xs text-white/50 bg-white/10 px-2 py-1 rounded border border-white/20">
               /
             </kbd>
@@ -144,7 +144,7 @@ const SearchBox = ({ className = '', onMobile = false }: SearchBoxProps) => {
               setIsOpen(false);
               inputRef.current?.focus();
             }}
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-white/70 hover:text-white transition-colors"
+            className="absolute right-2 sm:right-3 top-1/2 transform -translate-y-1/2 text-white/70 hover:text-white transition-colors p-0.5"
           >
             <X className="w-4 h-4" />
           </button>
