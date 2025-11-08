@@ -208,10 +208,10 @@ const SearchBox = ({ className = '', onMobile = false }: SearchBoxProps) => {
 
       {/* No Results State */}
       {isOpen && query && results.length === 0 && (
-        <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-lg shadow-elegant border border-gray-200 z-50 p-8 text-center">
-          <Search className="w-8 h-8 text-gray-400 mx-auto mb-3" />
-          <p className="text-gray-600 font-medium mb-1">No results found</p>
-          <p className="text-sm text-gray-500">
+        <div className={`absolute ${onMobile ? 'top-full left-0 right-0' : 'top-full left-0'} ${onMobile ? 'w-full' : 'w-48 sm:w-56 md:w-96'} mt-2 bg-white rounded-lg shadow-elegant border border-gray-200 z-50 p-4 sm:p-6 text-center`}>
+          <Search className="w-6 h-6 sm:w-8 sm:h-8 text-gray-400 mx-auto mb-2 sm:mb-3" />
+          <p className="text-sm sm:text-base text-gray-600 font-medium mb-1">No results found</p>
+          <p className="text-xs sm:text-sm text-gray-500">
             Try searching for services, industries, partners, or policies
           </p>
         </div>
