@@ -54,9 +54,9 @@ const Header = () => {
     <header className="shadow-elegant sticky top-0 z-50">
       {/* Social Media Bar */}
       <div className="bg-biolegend-purple/95 backdrop-blur">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center">
-            <div className="flex space-x-4">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
+          <div className="flex justify-between items-center py-2">
+            <div className="flex space-x-3 sm:space-x-4">
               <a href="https://www.facebook.com/biolegendscientific.co.ke" target="_blank" rel="noopener noreferrer" className="text-white hover:text-biolegend-yellow transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
@@ -76,34 +76,34 @@ const Header = () => {
 
       {/* Main Navigation */}
       <nav className="bg-white/80 backdrop-blur-md supports-[backdrop-filter]:bg-white/70">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-32 md:h-36">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
+          <div className="flex justify-between items-center min-h-24 md:min-h-28 py-2">
             {/* Logo and Badge */}
-            <div className="flex-shrink-0 flex items-center gap-2 md:gap-3">
+            <div className="flex-shrink-0 flex items-center gap-1 sm:gap-2 md:gap-3">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2Fcbe5d68584504715befd11df22888633%2F7ae1ac41b01644408c45b8bf1c19b281?format=webp&width=800"
                 alt="Biolegend Scientific Ltd Logo"
-                className="h-28 md:h-32 w-auto"
+                className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto"
               />
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2Faee07e33c3354ccd83e0e92fa61665d5%2F4efb80e3f5de43e69f57164afd0d9fe3?format=webp&width=800"
                 alt="Corruption Free - A Certified Blue Company Member"
-                className="h-32 md:h-36 w-auto"
+                className="h-24 sm:h-28 md:h-32 lg:h-36 w-auto"
                 title="Certified Blue Company - Corruption Free Member"
               />
             </div>
 
-            {/* Desktop Navigation */}
-            <div className="hidden lg:block">
-              <div className="ml-10 flex items-center space-x-8">
-                <a href="/" className="text-foreground hover:text-biolegend-purple font-medium transition-colors">
+            {/* Desktop Navigation - Only show on xl and larger */}
+            <div className="hidden xl:flex xl:flex-1 justify-center">
+              <div className="flex items-center space-x-4 2xl:space-x-6">
+                <a href="/" className="text-foreground hover:text-biolegend-purple font-medium text-sm transition-colors whitespace-nowrap">
                   Home
                 </a>
-                
+
                 {/* Services Dropdown */}
                 <div className="relative">
                   <button
-                    className="text-foreground hover:text-biolegend-purple font-medium flex items-center transition-colors"
+                    className="text-foreground hover:text-biolegend-purple font-medium flex items-center transition-colors text-sm whitespace-nowrap"
                     onMouseEnter={() => setIsServicesOpen(true)}
                     onMouseLeave={() => setIsServicesOpen(false)}
                   >
@@ -112,11 +112,11 @@ const Header = () => {
                   </button>
                   {isServicesOpen && (
                     <div
-                      className="absolute top-full right-0 mt-2 w-[820px] bg-white/95 backdrop-blur rounded-xl shadow-elegant border z-50 p-4"
+                      className="absolute top-full right-0 mt-2 w-screen sm:w-[680px] lg:w-[820px] max-w-[calc(100vw-2rem)] bg-white/95 backdrop-blur rounded-xl shadow-elegant border z-50 p-4"
                       onMouseEnter={() => setIsServicesOpen(true)}
                       onMouseLeave={() => setIsServicesOpen(false)}
                     >
-                      <div className="absolute -top-2 right-10 w-4 h-4 bg-white rotate-45 border-l border-t"></div>
+                      <div className="absolute -top-2 right-6 sm:right-10 w-4 h-4 bg-white rotate-45 border-l border-t"></div>
                       <div className="flex items-center justify-between px-2 pb-3 border-b">
                         <a href="/services" className="text-sm font-semibold text-biolegend-purple hover:underline inline-flex items-center">
                           View All Services
@@ -124,7 +124,7 @@ const Header = () => {
                         </a>
                         <span className="text-xs text-muted-foreground">Explore categories</span>
                       </div>
-                      <div className="pt-3 grid grid-cols-3 lg:grid-cols-4 gap-2">
+                      <div className="pt-3 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
                         {services.map((service, index) => (
                           <a
                             key={index}
@@ -143,7 +143,7 @@ const Header = () => {
                 {/* Industries Dropdown */}
                 <div className="relative">
                   <button
-                    className="text-foreground hover:text-biolegend-purple font-medium flex items-center transition-colors"
+                    className="text-foreground hover:text-biolegend-purple font-medium flex items-center transition-colors text-sm whitespace-nowrap"
                     onMouseEnter={() => setIsIndustriesOpen(true)}
                     onMouseLeave={() => setIsIndustriesOpen(false)}
                   >
@@ -152,11 +152,11 @@ const Header = () => {
                   </button>
                   {isIndustriesOpen && (
                     <div
-                      className="absolute top-full right-0 mt-2 w-[680px] bg-white/95 backdrop-blur rounded-xl shadow-elegant border z-50 p-4"
+                      className="absolute top-full right-0 mt-2 w-screen sm:w-[580px] lg:w-[680px] max-w-[calc(100vw-2rem)] bg-white/95 backdrop-blur rounded-xl shadow-elegant border z-50 p-4"
                       onMouseEnter={() => setIsIndustriesOpen(true)}
                       onMouseLeave={() => setIsIndustriesOpen(false)}
                     >
-                      <div className="absolute -top-2 right-10 w-4 h-4 bg-white rotate-45 border-l border-t"></div>
+                      <div className="absolute -top-2 right-6 sm:right-10 w-4 h-4 bg-white rotate-45 border-l border-t"></div>
                       <div className="flex items-center justify-between px-2 pb-3 border-b">
                         <a href="/industries" className="text-sm font-semibold text-biolegend-purple hover:underline inline-flex items-center">
                           View All Industries
@@ -183,7 +183,7 @@ const Header = () => {
                 {/* Policies Dropdown */}
                 <div className="relative">
                   <button
-                    className="text-foreground hover:text-biolegend-purple font-medium flex items-center transition-colors"
+                    className="text-foreground hover:text-biolegend-purple font-medium flex items-center transition-colors text-sm whitespace-nowrap"
                     onMouseEnter={() => setIsPoliciesOpen(true)}
                     onMouseLeave={() => setIsPoliciesOpen(false)}
                   >
@@ -192,11 +192,11 @@ const Header = () => {
                   </button>
                   {isPoliciesOpen && (
                     <div
-                      className="absolute top-full right-0 mt-2 w-[640px] bg-white/95 backdrop-blur rounded-xl shadow-elegant border z-50 p-4"
+                      className="absolute top-full right-0 mt-2 w-screen sm:w-[540px] lg:w-[640px] max-w-[calc(100vw-2rem)] bg-white/95 backdrop-blur rounded-xl shadow-elegant border z-50 p-4"
                       onMouseEnter={() => setIsPoliciesOpen(true)}
                       onMouseLeave={() => setIsPoliciesOpen(false)}
                     >
-                      <div className="absolute -top-2 right-10 w-4 h-4 bg-white rotate-45 border-l border-t"></div>
+                      <div className="absolute -top-2 right-6 sm:right-10 w-4 h-4 bg-white rotate-45 border-l border-t"></div>
                       <div className="flex items-center justify-between px-2 pb-3 border-b">
                         <a href="/policies" className="text-sm font-semibold text-biolegend-purple hover:underline inline-flex items-center">
                           View All Policies
@@ -220,18 +220,18 @@ const Header = () => {
                   )}
                 </div>
 
-                <a href="/employees" className="text-foreground hover:text-biolegend-purple font-medium transition-colors">
+                <a href="/employees" className="text-foreground hover:text-biolegend-purple font-medium text-sm transition-colors whitespace-nowrap">
                   Employees
                 </a>
 
-                <a href="/contact" className="text-foreground hover:text-biolegend-purple font-medium transition-colors">
+                <a href="/contact" className="text-foreground hover:text-biolegend-purple font-medium text-sm transition-colors whitespace-nowrap">
                   Contact Us
                 </a>
               </div>
             </div>
 
             {/* Mobile menu button */}
-            <div className="lg:hidden">
+            <div className="xl:hidden">
               <Button
                 variant="ghost"
                 size="sm"
@@ -245,7 +245,7 @@ const Header = () => {
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <div className="lg:hidden">
+            <div className="xl:hidden">
               <div className="px-4 pt-4 pb-3 border-b">
                 <SearchBox onMobile={true} />
               </div>
