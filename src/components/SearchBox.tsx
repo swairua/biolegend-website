@@ -17,6 +17,24 @@ const SearchBox = ({ className = '', onMobile = false }: SearchBoxProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const navigate = useNavigate();
 
+  // Global keyboard shortcut to focus search
+  useEffect(() => {
+    const handleGlobalKeyPress = (e: KeyboardEvent) => {
+      // Check if user is typing in an input or textarea
+      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) {
+        return;
+      }
+
+      if (e.key === '/' && !onMobile) {
+        e.preventDefault();
+        inputRef.current?.focus();
+      }
+    };
+
+    window.addEventListener('keydown', handleGlobalKeyPress);
+    return () => window.removeEventListener('keydown', handleGlobalKeyPress);
+  }, [onMobile]);
+
   useEffect(() => {
     if (query.trim()) {
       const searchResults = searchContent(query);
