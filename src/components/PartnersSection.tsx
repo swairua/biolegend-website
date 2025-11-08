@@ -23,11 +23,11 @@ const PartnersSection = () => {
     {
       category: "Water Testing & Analysis",
       partners: [
-        { name: "Palintest", description: "🇰🇪 Official Distributor in Kenya - Global leader in water testing with over 75 years of experience", specialty: "Photometers, Test Kits, Pool Testing, Authorized Dealer", url: "https://www.palintest.com", internalPath: "/palintest", isOfficial: true },
-        { name: "Lovibond", description: "Precision color measurement and water analysis solutions", specialty: "Color Measurement, Water Analysis", url: "https://www.lovibond.com", internalPath: "/lovibond" },
+        { name: "🇰🇪 Palintest", description: "Official Distributor in Kenya - Global leader in water testing with over 75 years of experience", specialty: "Photometers, Test Kits, Pool Testing, Authorized Dealer", url: "https://www.palintest.com", internalPath: "/palintest", isOfficial: true },
+        { name: "🇰🇪 Lovibond", description: "Official Distributor in Kenya - Precision color measurement and water analysis solutions", specialty: "Color Measurement, Water Analysis, Portable Equipment", url: "https://www.lovibond.com", internalPath: "/lovibond", isOfficial: true },
+        { name: "🇰🇪 Hanna Instruments", description: "Official Distributor in Kenya - Analytical instrumentation for laboratory and field testing", specialty: "pH Meters, EC Meters, Multi-parameter Testers", url: "https://www.hannainst.com", internalPath: "/hanna-instruments", isOfficial: true },
         { name: "Delagua", description: "Water quality testing solutions for developing regions", specialty: "Field Testing, Emergency Response", url: "https://www.delagua.org" },
-        { name: "Wagtech", description: "Portable water testing technology for field applications", specialty: "Portable Kits, Digital Testing", url: "https://www.wagtech.co.uk" },
-        { name: "Hannah Instruments", description: "Analytical instrumentation for laboratory and field testing", specialty: "pH Meters, EC Meters, Multi-parameter Testers", url: "https://www.hannainst.com", internalPath: "/hanna-instruments" }
+        { name: "Wagtech", description: "Portable water testing technology for field applications", specialty: "Portable Kits, Digital Testing", url: "https://www.wagtech.co.uk" }
       ]
     },
     {
