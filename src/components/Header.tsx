@@ -89,7 +89,7 @@ const Header = () => {
                 className="h-28 md:h-32 w-auto"
               />
               <img
-                src="/blue-company-badge.svg"
+                src="https://cdn.builder.io/api/v1/image/assets%2Faee07e33c3354ccd83e0e92fa61665d5%2F4efb80e3f5de43e69f57164afd0d9fe3?format=webp&width=800"
                 alt="Corruption Free - A Certified Blue Company Member"
                 className="h-32 md:h-36 w-auto"
                 title="Certified Blue Company - Corruption Free Member"
