@@ -9,6 +9,9 @@ const PartnersSection = () => {
     {
       category: "Scientific Equipment",
       partners: [
+        { name: "🇰🇪 Radwag", description: "Official Distributor in Kenya - Leading manufacturer of analytical balances and weighing equipment", specialty: "Analytical Balances, Precision Weighing, Laboratory Scales", url: "https://radwag.com", internalPath: "/radwag", isOfficial: true },
+        { name: "🇰🇪 Bioendo", description: "Official Distributor in Kenya - Specialized supplier of medical, dental, and laboratory equipment", specialty: "Medical Equipment, Dental Equipment, Laboratory Supplies", url: "https://bioendo.co.ke", internalPath: "/bioendo", isOfficial: true },
+        { name: "🇰🇪 MicroLab Scientific", description: "Official Distributor in Kenya - Comprehensive supplier of laboratory equipment and scientific instruments", specialty: "Microscopes, Laboratory Equipment, Analytical Instruments", url: "https://microlabscientific.co.ke", internalPath: "/microlab-scientific", isOfficial: true },
         { name: "Labtron", description: "Advanced laboratory equipment and instrumentation", specialty: "Centrifuges, Incubators, Autoclaves", url: "https://www.labtron.com" },
         { name: "Draglab Technologies", description: "Cutting-edge laboratory instruments and automation", specialty: "Digital Equipment, Laboratory Software", url: "https://www.drag-lab.de/EN/" },
         { name: "Hongshun Medical Instrument", description: "Medical and laboratory instrumentation", specialty: "Medical Devices, Diagnostic Equipment", url: "https://www.asian-medical.com" },
