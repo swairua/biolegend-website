@@ -292,6 +292,9 @@ const Header = () => {
                     </a>
                   ))}
                 </div>
+                <a href="/employees" className="block px-3 py-2 text-foreground hover:text-biolegend-purple font-medium">
+                  Employees
+                </a>
                 <a href="#contact" className="block px-3 py-2 text-foreground hover:text-biolegend-purple font-medium">
                   Contact Us
                 </a>
