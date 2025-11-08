@@ -96,7 +96,7 @@ export const actualSuppliers: EnhancedSupplier[] = [
   {
     id: "duchefa-biochemie",
     name: "Duchefa Biochemie",
-    description: "Plant tissue culture media, growth regulators, and specialized biochemicals for plant biotechnology",
+    description: "🇰🇪 Official Distributor in Kenya - Plant tissue culture media, growth regulators, and specialized biochemicals for plant biotechnology",
     specialties: ["Culture Media", "Growth Regulators", "Plant Biotechnology"],
     logo: "https://images.unsplash.com/photo-1583484963880-5ec7c86d69d4?w=200&h=100&fit=crop&crop=center",
     image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=800&h=400&fit=crop&crop=center",
@@ -108,18 +108,20 @@ export const actualSuppliers: EnhancedSupplier[] = [
     certification: ["ISO 9001"],
     established: 1960,
     countries: ["Netherlands", "Global"],
-    category: "Biotechnology & Plant Tissue Culture"
+    category: "Biotechnology & Plant Tissue Culture",
+    isOfficialDistributor: true
   },
   {
     id: "micromedica",
     name: "MicroMedica Laboratories",
-    description: "Dehydrated culture media and microbiology products for clinical, food, and environmental testing",
+    description: "🇰🇪 Official Distributor in Kenya - Dehydrated culture media and microbiology products for clinical, food, and environmental testing",
     specialties: ["Dehydrated Media", "Agar & Broths", "Selective Media"],
     logo: "https://micromedicalab.com/wp-content/uploads/2023/05/logo-1.png",
     image: "https://micromedicalab.com/wp-content/uploads/2023/05/banner-1.jpg",
     websiteUrl: "https://micromedicalab.com/",
     contactInfo: {},
-    category: "Microbiology & Pathology"
+    category: "Microbiology & Pathology",
+    isOfficialDistributor: true
   },
   {
     id: "lovibond",
