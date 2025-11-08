@@ -5,6 +5,17 @@ import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  const officialDistributors = [
+    { name: "Palintest", id: "palintest", color: "bg-blue-600", icon: "🌍" },
+    { name: "Radwag", id: "radwag", color: "bg-purple-600", icon: "⚖️" },
+    { name: "Lovibond", id: "lovibond", color: "bg-cyan-600", icon: "💧" },
+    { name: "Hanna Instruments", id: "hanna-instruments", color: "bg-indigo-600", icon: "📊" },
+    { name: "Duchefa Biochemie", id: "duchefa-biochemie", color: "bg-green-600", icon: "🧪" },
+    { name: "MicroMedica", id: "micromedica", color: "bg-rose-600", icon: "🧬" },
+    { name: "Bioendo", id: "bioendo", color: "bg-orange-600", icon: "🔬" },
+    { name: "MicroLab Scientific", id: "microlab-scientific", color: "bg-teal-600", icon: "🔭" }
+  ];
   
   const remoteBackgroundImages = [
     "https://images.pexels.com/photos/9574411/pexels-photo-9574411.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
