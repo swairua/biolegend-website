@@ -20,14 +20,14 @@ const ScientificEquipment = () => {
       name: "🇰🇪 Bioendo",
       description: "Official Distributor in Kenya - Specialized supplier of medical, dental, and laboratory equipment",
       specialties: ["Medical Equipment", "Dental Equipment", "Laboratory Supplies", "Sterilization Equipment"],
-      website: "https://bioendo.co.ke",
+      website: "https://bioendo.com",
       isOfficialDistributor: true
     },
     {
       name: "🇰🇪 MicroLab Scientific",
       description: "Official Distributor in Kenya - Comprehensive supplier of laboratory equipment and scientific instruments",
       specialties: ["Microscopes", "Laboratory Equipment", "Analytical Instruments", "Consumables"],
-      website: "https://microlabscientific.co.ke",
+      website: "https://microlabscientific.com",
       isOfficialDistributor: true
     },
     {
