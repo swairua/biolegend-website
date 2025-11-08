@@ -245,7 +245,7 @@ const Header = () => {
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <div className="lg:hidden">
+            <div className="xl:hidden">
               <div className="px-4 pt-4 pb-3 border-b">
                 <SearchBox onMobile={true} />
               </div>
