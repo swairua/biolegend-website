@@ -65,9 +65,9 @@ export const actualSuppliers: EnhancedSupplier[] = [
     specialties: ["Medical Equipment", "Dental Equipment", "Laboratory Supplies", "Sterilization Equipment"],
     logo: "https://images.pexels.com/photos/9243571/pexels-photo-9243571.jpeg?auto=compress&cs=tinysrgb&w=100&h=60&fit=crop",
     image: "https://images.pexels.com/photos/9243571/pexels-photo-9243571.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop",
-    websiteUrl: "https://bioendo.co.ke",
+    websiteUrl: "https://bioendo.com",
     contactInfo: {
-      email: "info@bioendo.co.ke"
+      email: "info@bioendo.com"
     },
     certification: ["ISO 9001"],
     established: 2005,
@@ -82,9 +82,9 @@ export const actualSuppliers: EnhancedSupplier[] = [
     specialties: ["Microscopes", "Laboratory Equipment", "Analytical Instruments", "Consumables"],
     logo: "https://images.pexels.com/photos/9574411/pexels-photo-9574411.jpeg?auto=compress&cs=tinysrgb&w=100&h=60&fit=crop",
     image: "https://images.pexels.com/photos/9574411/pexels-photo-9574411.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop",
-    websiteUrl: "https://microlabscientific.co.ke",
+    websiteUrl: "https://microlabscientific.com",
     contactInfo: {
-      email: "info@microlabscientific.co.ke"
+      email: "info@microlabscientific.com"
     },
     certification: ["ISO 9001"],
     established: 2008,

@@ -55,16 +55,16 @@ const Header = () => {
       {/* Social Media Bar */}
       <div className="bg-biolegend-purple/95 backdrop-blur">
         <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
-          <div className="flex justify-between items-center py-2">
-            <div className="flex space-x-3 sm:space-x-4">
-              <a href="https://www.facebook.com/biolegendscientific.co.ke" target="_blank" rel="noopener noreferrer" className="text-white hover:text-biolegend-yellow transition-colors">
-                <Facebook className="w-5 h-5" />
+          <div className="flex justify-between items-center py-2 sm:py-2.5">
+            <div className="flex space-x-2 sm:space-x-3 md:space-x-4">
+              <a href="https://www.facebook.com/biolegendscientific.co.ke" target="_blank" rel="noopener noreferrer" className="text-white hover:text-biolegend-yellow transition-colors p-1">
+                <Facebook className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
-              <a href="https://www.linkedin.com/in/biolegend-scientific-934b1937b" target="_blank" rel="noopener noreferrer" className="text-white hover:text-biolegend-yellow transition-colors">
-                <Linkedin className="w-5 h-5" />
+              <a href="https://www.linkedin.com/in/biolegend-scientific-934b1937b" target="_blank" rel="noopener noreferrer" className="text-white hover:text-biolegend-yellow transition-colors p-1">
+                <Linkedin className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
-              <a href="https://x.com/BIOLEGENDSLTD?t=bsDNtEINWzlYbUk0fv-AqA&s=08" target="_blank" rel="noopener noreferrer" className="text-white hover:text-biolegend-yellow transition-colors">
-                <Twitter className="w-5 h-5" />
+              <a href="https://x.com/BIOLEGENDSLTD?t=bsDNtEINWzlYbUk0fv-AqA&s=08" target="_blank" rel="noopener noreferrer" className="text-white hover:text-biolegend-yellow transition-colors p-1">
+                <Twitter className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
             </div>
             <div className="hidden md:block">
@@ -77,18 +77,18 @@ const Header = () => {
       {/* Main Navigation */}
       <nav className="bg-white/80 backdrop-blur-md supports-[backdrop-filter]:bg-white/70">
         <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
-          <div className="flex justify-between items-center min-h-24 md:min-h-28 py-2">
+          <div className="flex justify-between items-center min-h-16 sm:min-h-20 md:min-h-24 lg:min-h-28 py-2 sm:py-3">
             {/* Logo and Badge */}
-            <div className="flex-shrink-0 flex items-center gap-1 sm:gap-2 md:gap-3">
+            <div className="flex-shrink-0 flex items-center gap-0.5 sm:gap-1 md:gap-2 lg:gap-3">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2Fcbe5d68584504715befd11df22888633%2F7ae1ac41b01644408c45b8bf1c19b281?format=webp&width=800"
                 alt="Biolegend Scientific Ltd Logo"
-                className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto"
+                className="h-14 sm:h-20 md:h-24 lg:h-28 xl:h-32 w-auto"
               />
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2Faee07e33c3354ccd83e0e92fa61665d5%2F4efb80e3f5de43e69f57164afd0d9fe3?format=webp&width=800"
                 alt="Corruption Free - A Certified Blue Company Member"
-                className="h-24 sm:h-28 md:h-32 lg:h-36 w-auto"
+                className="h-16 sm:h-24 md:h-28 lg:h-32 xl:h-36 w-auto"
                 title="Certified Blue Company - Corruption Free Member"
               />
             </div>
@@ -234,68 +234,68 @@ const Header = () => {
             <div className="xl:hidden">
               <Button
                 variant="ghost"
-                size="sm"
+                size="lg"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-foreground hover:text-biolegend-purple"
+                className="text-foreground hover:text-biolegend-purple hover:bg-biolegend-yellow/10 transition-colors p-2 sm:p-3"
               >
-                {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                {isMenuOpen ? <X className="h-6 w-6 sm:h-7 sm:w-7" /> : <Menu className="h-6 w-6 sm:h-7 sm:w-7" />}
               </Button>
             </div>
           </div>
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <div className="xl:hidden">
-              <div className="px-4 pt-4 pb-3 border-b">
+            <div className="xl:hidden bg-white border-t max-h-[calc(100vh-200px)] overflow-y-auto">
+              <div className="px-3 sm:px-4 pt-3 sm:pt-4 pb-3 border-b">
                 <SearchBox onMobile={true} />
               </div>
-              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t">
-                <a href="#home" className="block px-3 py-2 text-foreground hover:text-biolegend-purple font-medium">
+              <div className="px-2 sm:px-3 pt-2 pb-3 space-y-1">
+                <a href="#home" className="block px-3 py-2 text-sm sm:text-base text-foreground hover:text-biolegend-purple hover:bg-biolegend-yellow/10 rounded font-medium transition-colors">
                   Home
                 </a>
                 <div className="px-3 py-2">
-                  <p className="text-biolegend-purple font-semibold mb-2">Services</p>
+                  <p className="text-xs sm:text-sm text-biolegend-purple font-semibold mb-2">Services</p>
                   {services.map((service, index) => (
                     <a
                       key={index}
                       href={`/services/${service.slug}`}
-                      className="flex items-center justify-between py-1 text-sm text-muted-foreground hover:text-biolegend-purple pl-4 pr-2"
+                      className="flex items-center justify-between py-1.5 sm:py-2 text-xs sm:text-sm text-muted-foreground hover:text-biolegend-purple hover:bg-biolegend-yellow/5 rounded pl-4 pr-2 transition-colors"
                     >
-                      <span>{service.name}</span>
-                      <ChevronRight className="w-4 h-4" />
+                      <span className="truncate">{service.name}</span>
+                      <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0 ml-2" />
                     </a>
                   ))}
                 </div>
                 <div className="px-3 py-2">
-                  <p className="text-biolegend-purple font-semibold mb-2">Industries</p>
+                  <p className="text-xs sm:text-sm text-biolegend-purple font-semibold mb-2">Industries</p>
                   {industries.map((industry, index) => (
                     <a
                       key={index}
                       href={`/industries/${industry.slug}`}
-                      className="flex items-center justify-between py-1 text-sm text-muted-foreground hover:text-biolegend-purple pl-4 pr-2"
+                      className="flex items-center justify-between py-1.5 sm:py-2 text-xs sm:text-sm text-muted-foreground hover:text-biolegend-purple hover:bg-biolegend-yellow/5 rounded pl-4 pr-2 transition-colors"
                     >
-                      <span>{industry.name}</span>
-                      <ChevronRight className="w-4 h-4" />
+                      <span className="truncate">{industry.name}</span>
+                      <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0 ml-2" />
                     </a>
                   ))}
                 </div>
                 <div className="px-3 py-2">
-                  <p className="text-biolegend-purple font-semibold mb-2">Policies</p>
+                  <p className="text-xs sm:text-sm text-biolegend-purple font-semibold mb-2">Policies</p>
                   {policies.map((policy, index) => (
                     <a
                       key={index}
                       href={`/policies/${policy.slug}`}
-                      className="flex items-center justify-between py-1 text-sm text-muted-foreground hover:text-biolegend-purple pl-4 pr-2"
+                      className="flex items-center justify-between py-1.5 sm:py-2 text-xs sm:text-sm text-muted-foreground hover:text-biolegend-purple hover:bg-biolegend-yellow/5 rounded pl-4 pr-2 transition-colors"
                     >
-                      <span>{policy.name}</span>
-                      <ChevronRight className="w-4 h-4" />
+                      <span className="truncate">{policy.name}</span>
+                      <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0 ml-2" />
                     </a>
                   ))}
                 </div>
-                <a href="/employees" className="block px-3 py-2 text-foreground hover:text-biolegend-purple font-medium">
+                <a href="/employees" className="block px-3 py-2 text-sm sm:text-base text-foreground hover:text-biolegend-purple hover:bg-biolegend-yellow/10 rounded font-medium transition-colors">
                   Employees
                 </a>
-                <a href="#contact" className="block px-3 py-2 text-foreground hover:text-biolegend-purple font-medium">
+                <a href="/contact" className="block px-3 py-2 text-sm sm:text-base text-foreground hover:text-biolegend-purple hover:bg-biolegend-yellow/10 rounded font-medium transition-colors">
                   Contact Us
                 </a>
               </div>

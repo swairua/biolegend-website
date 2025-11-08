@@ -119,7 +119,7 @@ const SearchBox = ({ className = '', onMobile = false }: SearchBoxProps) => {
   return (
     <div ref={searchRef} className={`relative ${className}`}>
       <div className="relative group">
-        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white/70 pointer-events-none" />
+        <Search className="absolute left-2 sm:left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white/70 pointer-events-none flex-shrink-0" />
         <input
           ref={inputRef}
           type="text"
@@ -127,10 +127,10 @@ const SearchBox = ({ className = '', onMobile = false }: SearchBoxProps) => {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onFocus={() => query && setIsOpen(true)}
-          className={`${onMobile ? 'w-full' : 'w-64'} bg-white/10 border border-white/20 text-white placeholder:text-white/70 rounded-lg pl-10 pr-10 py-2 transition-all focus:outline-none focus:border-white/40 focus:bg-white/15`}
+          className={`${onMobile ? 'w-full' : 'w-48 sm:w-56 md:w-64'} bg-white/10 border border-white/20 text-white text-sm sm:text-base placeholder:text-white/70 rounded-lg pl-8 sm:pl-10 pr-8 sm:pr-10 py-1.5 sm:py-2 transition-all focus:outline-none focus:border-white/40 focus:bg-white/15`}
         />
         {!onMobile && !query && (
-          <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
+          <div className="absolute right-2 sm:right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
             <kbd className="hidden group-hover:block text-xs text-white/50 bg-white/10 px-2 py-1 rounded border border-white/20">
               /
             </kbd>
@@ -144,7 +144,7 @@ const SearchBox = ({ className = '', onMobile = false }: SearchBoxProps) => {
               setIsOpen(false);
               inputRef.current?.focus();
             }}
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-white/70 hover:text-white transition-colors"
+            className="absolute right-2 sm:right-3 top-1/2 transform -translate-y-1/2 text-white/70 hover:text-white transition-colors p-0.5"
           >
             <X className="w-4 h-4" />
           </button>
@@ -153,7 +153,7 @@ const SearchBox = ({ className = '', onMobile = false }: SearchBoxProps) => {
 
       {/* Results Dropdown */}
       {isOpen && results.length > 0 && (
-        <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-lg shadow-elegant border border-gray-200 z-50 max-h-96 overflow-y-auto">
+        <div className={`absolute ${onMobile ? 'top-full left-0 right-0' : 'top-full left-0'} ${onMobile ? 'w-full' : 'w-48 sm:w-56 md:w-96'} mt-2 bg-white rounded-lg shadow-elegant border border-gray-200 z-50 max-h-80 sm:max-h-96 overflow-y-auto`}>
           {/* Group results by category */}
           {['Service', 'Industry', 'Partner', 'Policy'].map((category) => {
             const categoryResults = results.filter(r => r.category === category);
@@ -161,7 +161,7 @@ const SearchBox = ({ className = '', onMobile = false }: SearchBoxProps) => {
 
             return (
               <div key={category}>
-                <div className="px-4 py-2 bg-gray-50 border-b border-gray-100">
+                <div className="px-3 sm:px-4 py-2 bg-gray-50 border-b border-gray-100">
                   <p className="text-xs font-semibold text-gray-600 uppercase tracking-wide">
                     {category}s
                   </p>
@@ -175,24 +175,24 @@ const SearchBox = ({ className = '', onMobile = false }: SearchBoxProps) => {
                       key={item.id}
                       onClick={() => handleSelectResult(item)}
                       onMouseEnter={() => setSelectedIndex(globalIndex)}
-                      className={`w-full px-4 py-3 text-left transition-colors border-b last:border-b-0 ${
+                      className={`w-full px-3 sm:px-4 py-2 sm:py-3 text-left transition-colors border-b last:border-b-0 ${
                         isSelected
                           ? 'bg-biolegend-purple/5'
                           : 'hover:bg-gray-50'
                       }`}
                     >
-                      <div className="flex items-start gap-3">
-                        <div className="text-xl mt-0.5">{item.icon}</div>
+                      <div className="flex items-start gap-2 sm:gap-3">
+                        <div className="text-lg sm:text-xl mt-0.5 flex-shrink-0">{item.icon}</div>
                         <div className="flex-1 min-w-0">
-                          <div className="flex items-center gap-2">
-                            <h4 className="font-medium text-gray-900 truncate">
+                          <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
+                            <h4 className="font-medium text-sm sm:text-base text-gray-900 truncate">
                               {item.title}
                             </h4>
-                            <span className={`text-xs px-2 py-0.5 rounded-full whitespace-nowrap ${getCategoryColor(item.category)}`}>
+                            <span className={`text-xs px-2 py-0.5 rounded-full whitespace-nowrap flex-shrink-0 ${getCategoryColor(item.category)}`}>
                               {item.category}
                             </span>
                           </div>
-                          <p className="text-sm text-gray-600 line-clamp-1">
+                          <p className="text-xs sm:text-sm text-gray-600 line-clamp-1">
                             {item.description}
                           </p>
                         </div>
@@ -208,10 +208,10 @@ const SearchBox = ({ className = '', onMobile = false }: SearchBoxProps) => {
 
       {/* No Results State */}
       {isOpen && query && results.length === 0 && (
-        <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-lg shadow-elegant border border-gray-200 z-50 p-8 text-center">
-          <Search className="w-8 h-8 text-gray-400 mx-auto mb-3" />
-          <p className="text-gray-600 font-medium mb-1">No results found</p>
-          <p className="text-sm text-gray-500">
+        <div className={`absolute ${onMobile ? 'top-full left-0 right-0' : 'top-full left-0'} ${onMobile ? 'w-full' : 'w-48 sm:w-56 md:w-96'} mt-2 bg-white rounded-lg shadow-elegant border border-gray-200 z-50 p-4 sm:p-6 text-center`}>
+          <Search className="w-6 h-6 sm:w-8 sm:h-8 text-gray-400 mx-auto mb-2 sm:mb-3" />
+          <p className="text-sm sm:text-base text-gray-600 font-medium mb-1">No results found</p>
+          <p className="text-xs sm:text-sm text-gray-500">
             Try searching for services, industries, partners, or policies
           </p>
         </div>
