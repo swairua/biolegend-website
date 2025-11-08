@@ -153,7 +153,7 @@ const SearchBox = ({ className = '', onMobile = false }: SearchBoxProps) => {
 
       {/* Results Dropdown */}
       {isOpen && results.length > 0 && (
-        <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-lg shadow-elegant border border-gray-200 z-50 max-h-96 overflow-y-auto">
+        <div className={`absolute ${onMobile ? 'top-full left-0 right-0' : 'top-full left-0'} ${onMobile ? 'w-full' : 'w-48 sm:w-56 md:w-96'} mt-2 bg-white rounded-lg shadow-elegant border border-gray-200 z-50 max-h-80 sm:max-h-96 overflow-y-auto`}>
           {/* Group results by category */}
           {['Service', 'Industry', 'Partner', 'Policy'].map((category) => {
             const categoryResults = results.filter(r => r.category === category);
