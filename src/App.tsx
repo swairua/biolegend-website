@@ -39,6 +39,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import PartnerPage from "./pages/PartnerPage";
 import Policies from "./pages/Policies";
+import Employees from "./pages/Employees";
 import AntiBribery from "./pages/policies/AntiBribery";
 import BusinessContinuity from "./pages/policies/BusinessContinuity";
 import CustomerServicePolicy from "./pages/policies/CustomerService";
