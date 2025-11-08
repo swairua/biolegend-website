@@ -81,12 +81,18 @@ const Header = () => {
       <nav className="bg-white/80 backdrop-blur-md supports-[backdrop-filter]:bg-white/70">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-32 md:h-36">
-            {/* Logo */}
-            <div className="flex-shrink-0">
+            {/* Logo and Badge */}
+            <div className="flex-shrink-0 flex items-center gap-2 md:gap-3">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2Fcbe5d68584504715befd11df22888633%2F7ae1ac41b01644408c45b8bf1c19b281?format=webp&width=800"
                 alt="Biolegend Scientific Ltd Logo"
                 className="h-28 md:h-32 w-auto"
+              />
+              <img
+                src="/blue-company-badge.svg"
+                alt="Corruption Free - A Certified Blue Company Member"
+                className="h-20 md:h-24 w-auto"
+                title="Certified Blue Company - Corruption Free Member"
               />
             </div>
 
