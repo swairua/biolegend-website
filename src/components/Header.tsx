@@ -112,11 +112,11 @@ const Header = () => {
                   </button>
                   {isServicesOpen && (
                     <div
-                      className="absolute top-full right-0 mt-2 w-[820px] bg-white/95 backdrop-blur rounded-xl shadow-elegant border z-50 p-4"
+                      className="absolute top-full right-0 mt-2 w-screen sm:w-[680px] lg:w-[820px] max-w-[calc(100vw-2rem)] bg-white/95 backdrop-blur rounded-xl shadow-elegant border z-50 p-4"
                       onMouseEnter={() => setIsServicesOpen(true)}
                       onMouseLeave={() => setIsServicesOpen(false)}
                     >
-                      <div className="absolute -top-2 right-10 w-4 h-4 bg-white rotate-45 border-l border-t"></div>
+                      <div className="absolute -top-2 right-6 sm:right-10 w-4 h-4 bg-white rotate-45 border-l border-t"></div>
                       <div className="flex items-center justify-between px-2 pb-3 border-b">
                         <a href="/services" className="text-sm font-semibold text-biolegend-purple hover:underline inline-flex items-center">
                           View All Services
@@ -124,7 +124,7 @@ const Header = () => {
                         </a>
                         <span className="text-xs text-muted-foreground">Explore categories</span>
                       </div>
-                      <div className="pt-3 grid grid-cols-3 lg:grid-cols-4 gap-2">
+                      <div className="pt-3 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
                         {services.map((service, index) => (
                           <a
                             key={index}
@@ -152,11 +152,11 @@ const Header = () => {
                   </button>
                   {isIndustriesOpen && (
                     <div
-                      className="absolute top-full right-0 mt-2 w-[680px] bg-white/95 backdrop-blur rounded-xl shadow-elegant border z-50 p-4"
+                      className="absolute top-full right-0 mt-2 w-screen sm:w-[580px] lg:w-[680px] max-w-[calc(100vw-2rem)] bg-white/95 backdrop-blur rounded-xl shadow-elegant border z-50 p-4"
                       onMouseEnter={() => setIsIndustriesOpen(true)}
                       onMouseLeave={() => setIsIndustriesOpen(false)}
                     >
-                      <div className="absolute -top-2 right-10 w-4 h-4 bg-white rotate-45 border-l border-t"></div>
+                      <div className="absolute -top-2 right-6 sm:right-10 w-4 h-4 bg-white rotate-45 border-l border-t"></div>
                       <div className="flex items-center justify-between px-2 pb-3 border-b">
                         <a href="/industries" className="text-sm font-semibold text-biolegend-purple hover:underline inline-flex items-center">
                           View All Industries
@@ -192,11 +192,11 @@ const Header = () => {
                   </button>
                   {isPoliciesOpen && (
                     <div
-                      className="absolute top-full right-0 mt-2 w-[640px] bg-white/95 backdrop-blur rounded-xl shadow-elegant border z-50 p-4"
+                      className="absolute top-full right-0 mt-2 w-screen sm:w-[540px] lg:w-[640px] max-w-[calc(100vw-2rem)] bg-white/95 backdrop-blur rounded-xl shadow-elegant border z-50 p-4"
                       onMouseEnter={() => setIsPoliciesOpen(true)}
                       onMouseLeave={() => setIsPoliciesOpen(false)}
                     >
-                      <div className="absolute -top-2 right-10 w-4 h-4 bg-white rotate-45 border-l border-t"></div>
+                      <div className="absolute -top-2 right-6 sm:right-10 w-4 h-4 bg-white rotate-45 border-l border-t"></div>
                       <div className="flex items-center justify-between px-2 pb-3 border-b">
                         <a href="/policies" className="text-sm font-semibold text-biolegend-purple hover:underline inline-flex items-center">
                           View All Policies
