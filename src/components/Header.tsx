@@ -93,17 +93,17 @@ const Header = () => {
               />
             </div>
 
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex lg:flex-1 justify-center">
-              <div className="flex items-center space-x-2 xl:space-x-6">
-                <a href="/" className="text-foreground hover:text-biolegend-purple font-medium text-sm xl:text-base transition-colors whitespace-nowrap">
+            {/* Desktop Navigation - Only show on xl and larger */}
+            <div className="hidden xl:flex xl:flex-1 justify-center">
+              <div className="flex items-center space-x-4 2xl:space-x-6">
+                <a href="/" className="text-foreground hover:text-biolegend-purple font-medium text-sm transition-colors whitespace-nowrap">
                   Home
                 </a>
 
                 {/* Services Dropdown */}
                 <div className="relative">
                   <button
-                    className="text-foreground hover:text-biolegend-purple font-medium flex items-center transition-colors text-sm xl:text-base whitespace-nowrap"
+                    className="text-foreground hover:text-biolegend-purple font-medium flex items-center transition-colors text-sm whitespace-nowrap"
                     onMouseEnter={() => setIsServicesOpen(true)}
                     onMouseLeave={() => setIsServicesOpen(false)}
                   >
@@ -143,7 +143,7 @@ const Header = () => {
                 {/* Industries Dropdown */}
                 <div className="relative">
                   <button
-                    className="text-foreground hover:text-biolegend-purple font-medium flex items-center transition-colors text-sm xl:text-base whitespace-nowrap"
+                    className="text-foreground hover:text-biolegend-purple font-medium flex items-center transition-colors text-sm whitespace-nowrap"
                     onMouseEnter={() => setIsIndustriesOpen(true)}
                     onMouseLeave={() => setIsIndustriesOpen(false)}
                   >
@@ -183,7 +183,7 @@ const Header = () => {
                 {/* Policies Dropdown */}
                 <div className="relative">
                   <button
-                    className="text-foreground hover:text-biolegend-purple font-medium flex items-center transition-colors text-sm xl:text-base whitespace-nowrap"
+                    className="text-foreground hover:text-biolegend-purple font-medium flex items-center transition-colors text-sm whitespace-nowrap"
                     onMouseEnter={() => setIsPoliciesOpen(true)}
                     onMouseLeave={() => setIsPoliciesOpen(false)}
                   >
@@ -220,18 +220,18 @@ const Header = () => {
                   )}
                 </div>
 
-                <a href="/employees" className="text-foreground hover:text-biolegend-purple font-medium text-sm xl:text-base transition-colors whitespace-nowrap">
+                <a href="/employees" className="text-foreground hover:text-biolegend-purple font-medium text-sm transition-colors whitespace-nowrap">
                   Employees
                 </a>
 
-                <a href="/contact" className="text-foreground hover:text-biolegend-purple font-medium text-sm xl:text-base transition-colors whitespace-nowrap">
+                <a href="/contact" className="text-foreground hover:text-biolegend-purple font-medium text-sm transition-colors whitespace-nowrap">
                   Contact Us
                 </a>
               </div>
             </div>
 
             {/* Mobile menu button */}
-            <div className="lg:hidden">
+            <div className="xl:hidden">
               <Button
                 variant="ghost"
                 size="sm"
