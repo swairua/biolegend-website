@@ -55,16 +55,16 @@ const Header = () => {
       {/* Social Media Bar */}
       <div className="bg-biolegend-purple/95 backdrop-blur">
         <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
-          <div className="flex justify-between items-center py-2">
-            <div className="flex space-x-3 sm:space-x-4">
-              <a href="https://www.facebook.com/biolegendscientific.co.ke" target="_blank" rel="noopener noreferrer" className="text-white hover:text-biolegend-yellow transition-colors">
-                <Facebook className="w-5 h-5" />
+          <div className="flex justify-between items-center py-2 sm:py-2.5">
+            <div className="flex space-x-2 sm:space-x-3 md:space-x-4">
+              <a href="https://www.facebook.com/biolegendscientific.co.ke" target="_blank" rel="noopener noreferrer" className="text-white hover:text-biolegend-yellow transition-colors p-1">
+                <Facebook className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
-              <a href="https://www.linkedin.com/in/biolegend-scientific-934b1937b" target="_blank" rel="noopener noreferrer" className="text-white hover:text-biolegend-yellow transition-colors">
-                <Linkedin className="w-5 h-5" />
+              <a href="https://www.linkedin.com/in/biolegend-scientific-934b1937b" target="_blank" rel="noopener noreferrer" className="text-white hover:text-biolegend-yellow transition-colors p-1">
+                <Linkedin className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
-              <a href="https://x.com/BIOLEGENDSLTD?t=bsDNtEINWzlYbUk0fv-AqA&s=08" target="_blank" rel="noopener noreferrer" className="text-white hover:text-biolegend-yellow transition-colors">
-                <Twitter className="w-5 h-5" />
+              <a href="https://x.com/BIOLEGENDSLTD?t=bsDNtEINWzlYbUk0fv-AqA&s=08" target="_blank" rel="noopener noreferrer" className="text-white hover:text-biolegend-yellow transition-colors p-1">
+                <Twitter className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
             </div>
             <div className="hidden md:block">
