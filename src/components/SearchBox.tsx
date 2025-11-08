@@ -118,7 +118,7 @@ const SearchBox = ({ className = '', onMobile = false }: SearchBoxProps) => {
 
   return (
     <div ref={searchRef} className={`relative ${className}`}>
-      <div className="relative">
+      <div className="relative group">
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white/70 pointer-events-none" />
         <input
           ref={inputRef}
@@ -129,6 +129,13 @@ const SearchBox = ({ className = '', onMobile = false }: SearchBoxProps) => {
           onFocus={() => query && setIsOpen(true)}
           className={`${onMobile ? 'w-full' : 'w-64'} bg-white/10 border border-white/20 text-white placeholder:text-white/70 rounded-lg pl-10 pr-10 py-2 transition-all focus:outline-none focus:border-white/40 focus:bg-white/15`}
         />
+        {!onMobile && !query && (
+          <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
+            <kbd className="hidden group-hover:block text-xs text-white/50 bg-white/10 px-2 py-1 rounded border border-white/20">
+              /
+            </kbd>
+          </div>
+        )}
         {query && (
           <button
             onClick={() => {
