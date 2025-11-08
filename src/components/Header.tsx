@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Menu, X, ChevronDown, ChevronRight, Facebook, Linkedin, Twitter, Microscope, Droplets, Sprout, Milk, Leaf, Scale, Eye, TestTube, Beaker, Thermometer, Filter, Stethoscope, Shield, FlaskConical, BookOpen, ShieldAlert, LifeBuoy, Headset, Megaphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import SearchBox from "@/components/SearchBox";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
