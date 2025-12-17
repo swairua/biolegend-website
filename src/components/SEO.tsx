@@ -292,6 +292,16 @@ const SEO = ({
       <meta name="business:contact_data:country_name" content="Kenya" />
       <meta name="business:contact_data:phone_number" content="+254741207690" />
       <meta name="business:contact_data:email" content="biolegend@biolegendscientific.co.ke" />
+
+      {/* Brand and Business Meta Tags */}
+      <meta name="brand" content="Biolegend Scientific Ltd" />
+      <meta name="og:brand" content="Biolegend Scientific Ltd" />
+      <meta property="business:contact_data:street_address" content="Alpha Center, Eastern Bypass, Membley" />
+      <meta property="og:logo" content={logoUrl} />
+
+      {/* Additional Social Meta Tags */}
+      <meta name="pinterest:rich_pins" content="enabled" />
+      <meta property="article:publisher" content="https://www.facebook.com/biolegendscientific.co.ke" />
       
       {/* Twitter Cards */}
       <meta name="twitter:card" content="summary_large_image" />
