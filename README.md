@@ -1,73 +1,131 @@
-# Welcome to your Lovable project
+# Biolegend Scientific Ltd - Laboratory Equipment & Life Sciences Solutions
 
-## Project info
+Website for Biolegend Scientific Ltd, a leading supplier of laboratory equipment, scientific instruments, chemicals, and supplies in Kenya.
 
-**URL**: https://lovable.dev/projects/de349b86-bfa6-47e3-9e28-af11c0536a3a
+**Website**: https://biolegendscientific.co.ke
 
-## How can I edit this code?
+## About
 
-There are several ways of editing your application.
+Biolegend Scientific Ltd is an authorized distributor of world-leading laboratory equipment and scientific solutions. We serve education, healthcare, pharmaceutical, food and beverage, research, and environmental industries across Kenya.
 
-**Use Lovable**
+## Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/de349b86-bfa6-47e3-9e28-af11c0536a3a) and start prompting.
+- Comprehensive product catalog (laboratory equipment, water testing, life sciences, chemicals & reagents)
+- Industry-specific solutions
+- Partner and distributor information
+- Service area coverage across Kenya
+- Contact and support services
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
+## Tech Stack
 
 This project is built with:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- **Vite** - Fast build tool and dev server
+- **TypeScript** - Type-safe development
+- **React** - UI library
+- **shadcn-ui** - Component library
+- **Tailwind CSS** - Utility-first CSS framework
+- **React Router** - Client-side routing
+- **React Hook Form** - Form management
+- **Zod** - Schema validation
+- **Recharts** - Data visualization
 
-## How can I deploy this project?
+## Getting Started
 
-Simply open [Lovable](https://lovable.dev/projects/de349b86-bfa6-47e3-9e28-af11c0536a3a) and click on Share -> Publish.
+### Prerequisites
 
-## Can I connect a custom domain to my Lovable project?
+- Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-Yes, you can!
+### Installation
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+```sh
+# Step 1: Clone the repository
+git clone <YOUR_GIT_URL>
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+# Step 2: Navigate to the project directory
+cd <YOUR_PROJECT_NAME>
+
+# Step 3: Install dependencies
+npm install
+
+# Step 4: Start the development server
+npm run dev
+```
+
+The application will be available at `http://localhost:5173`
+
+### Available Scripts
+
+```sh
+# Start development server with hot reload
+npm run dev
+
+# Build for production
+npm run build
+
+# Build in development mode (for debugging)
+npm run build:dev
+
+# Preview production build
+npm run preview
+
+# Run ESLint
+npm run lint
+```
+
+## Project Structure
+
+```
+src/
+├── components/          # Reusable React components
+│   ├── ui/             # shadcn-ui components
+│   ├── Header.tsx      # Site header with navigation
+│   ├── HeroSection.tsx # Hero banner
+│   ├── Footer.tsx      # Site footer
+│   └── ...
+├── pages/              # Page components
+│   ├── Index.tsx       # Homepage
+│   ├── Contact.tsx     # Contact page
+│   ├── Industries/     # Industry-specific pages
+│   ├── Services/       # Service-specific pages
+│   └── ...
+├── lib/                # Utility functions
+├── hooks/              # Custom React hooks
+├── data/               # Data files (suppliers, products, etc.)
+└── main.tsx            # Application entry point
+```
+
+## Deployment
+
+This project can be deployed to various platforms:
+
+- **Netlify** - Connect your repository and deploy automatically
+- **Vercel** - Zero-config deployment for Next.js-style projects
+- **Traditional hosting** - Build and serve the static files
+
+For production builds:
+```sh
+npm run build
+```
+
+The `dist/` folder will contain the optimized production build.
+
+## SEO & Open Graph
+
+The site includes:
+- Comprehensive SEO meta tags
+- Open Graph tags for social media sharing
+- JSON-LD structured data
+- Sitemap and robots.txt
+- Optimized favicon and brand imagery
+
+## Support
+
+For questions or issues, please contact:
+- **Email**: biolegend@biolegendscientific.co.ke
+- **Phone**: +254741207690
+- **Address**: Alpha Center, Eastern Bypass, Membley, Nairobi, Kenya
+
+## License
+
+This project is proprietary to Biolegend Scientific Ltd.

@@ -14,11 +14,13 @@ const SEO = ({
   title = "Biolegend Scientific Ltd | Laboratory & Life Sciences Products in Kenya",
   description = "Laboratory equipment, water testing, life sciences, microbiology and biotechnology products in Kenya. Authorized partnerships, expert support, and nationwide delivery.",
   keywords = "laboratory supplier Kenya, water testing equipment, life sciences products, microbiology media, Duchefa, MicroMedica, Palintest, scientific instruments, chemicals and reagents",
-  image = "https://cdn.builder.io/api/v1/image/assets%2Fcbe5d68584504715befd11df22888633%2F7ae1ac41b01644408c45b8bf1c19b281?format=webp&width=800",
+  image = "https://cdn.builder.io/api/v1/image/assets%2Fcbe5d68584504715befd11df22888633%2F7ae1ac41b01644408c45b8bf1c19b281?format=webp&width=1200",
   url = "https://biolegendscientific.co.ke",
   type = "website",
   schema
 }: SEOProps) => {
+  const logoUrl = "https://cdn.builder.io/api/v1/image/assets%2Fcbe5d68584504715befd11df22888633%2F7ae1ac41b01644408c45b8bf1c19b281?format=webp&width=1200";
+  const faviconUrl = "https://cdn.builder.io/api/v1/image/assets%2Fcbe5d68584504715befd11df22888633%2F7ae1ac41b01644408c45b8bf1c19b281?format=webp&width=256";
   const canonicalUrl = url || (typeof window !== 'undefined' ? window.location.href : 'https://biolegendscientific.co.ke');
   const absoluteImage = image.startsWith('http') ? image : (() => { try { return new URL(image, canonicalUrl).toString(); } catch { return image; } })();
   const is404 = /404|not found/i.test(title);
@@ -29,7 +31,8 @@ const SEO = ({
       "@type": "Organization",
       "name": "Biolegend Scientific Ltd",
       "url": canonicalUrl,
-      "logo": absoluteImage,
+      "logo": logoUrl,
+      "image": logoUrl,
       "description": description,
       "alternateName": ["Biolegend Scientific", "Laboratory Supplier Kenya", "Palintest Supplier Kenya", "MicroMedica Supplier Kenya", "Loba Chemie Distributor Kenya"],
       "knowsAbout": ["Water Testing", "Plant Tissue Culture", "Microbiology Media", "Dehydrated Culture Media", "Laboratory Chemicals", "Chemical Analysis"],
@@ -213,10 +216,23 @@ const SEO = ({
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={absoluteImage}/>
+      <meta property="og:image" content={absoluteImage} />
+      <meta property="og:image:url" content={absoluteImage} />
+      <meta property="og:image:secure_url" content={absoluteImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:type" content="image/webp" />
+      <meta property="og:image:alt" content="Biolegend Scientific Ltd - Laboratory Equipment & Life Sciences" />
       <meta property="og:site_name" content="Biolegend Scientific Ltd" />
-      
-     
+      <meta property="og:locale" content="en_KE" />
+
+      {/* Favicon and Icons */}
+      <link rel="icon" href={faviconUrl} type="image/webp" />
+      <link rel="apple-touch-icon" href={logoUrl} />
+      <link rel="shortcut icon" href={faviconUrl} />
+      <meta name="msapplication-TileImage" content={logoUrl} />
+      <meta name="msapplication-TileColor" content="#6366f1" />
+
       {/* Additional SEO Meta Tags */}
       <meta name="geo.region" content="KE-30" />
       <meta name="geo.placename" content="Nairobi" />
@@ -277,12 +293,25 @@ const SEO = ({
       <meta name="business:contact_data:country_name" content="Kenya" />
       <meta name="business:contact_data:phone_number" content="+254741207690" />
       <meta name="business:contact_data:email" content="biolegend@biolegendscientific.co.ke" />
+
+      {/* Brand and Business Meta Tags */}
+      <meta name="brand" content="Biolegend Scientific Ltd" />
+      <meta name="og:brand" content="Biolegend Scientific Ltd" />
+      <meta property="business:contact_data:street_address" content="Alpha Center, Eastern Bypass, Membley" />
+      <meta property="og:logo" content={logoUrl} />
+
+      {/* Additional Social Meta Tags */}
+      <meta name="pinterest:rich_pins" content="enabled" />
+      <meta property="article:publisher" content="https://www.facebook.com/biolegendscientific.co.ke" />
       
       {/* Twitter Cards */}
       <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@BIOLEGENDSLTD" />
+      <meta name="twitter:creator" content="@BIOLEGENDSLTD" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={absoluteImage} />
+      <meta name="twitter:image:alt" content="Biolegend Scientific Ltd - Laboratory Equipment & Life Sciences" />
 
       {/* JSON-LD Schema */}
       {Array.isArray(finalSchema) ? (
