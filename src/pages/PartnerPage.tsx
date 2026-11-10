@@ -1,6 +1,5 @@
 import { useParams, Navigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Helmet } from "react-helmet-async";
 import { ExternalLink, Mail, Phone, MapPin, Calendar, Globe, Award, Users } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -22,7 +21,7 @@ const PartnerPage = () => {
   const [heroUrl, setHeroUrl] = useState<string | undefined>(undefined);
 
   useEffect(() => {
-    if (!partner?.websiteUrl) {
+    if (!partner?.websiteUrl || (!partner.logo && !partner.image)) {
       setLogoUrl(partner?.logo);
       setHeroUrl(partner?.image);
       return;
@@ -120,24 +119,18 @@ const PartnerPage = () => {
   const effectiveLogo = logoUrl || partner.logo;
   const effectiveHero = heroUrl || partner.image;
   const showHeroImage = !!effectiveHero && !isStockPlaceholder(effectiveHero);
-  const isLogoPlaceholder = isStockPlaceholder(effectiveLogo);
+  const isLogoPlaceholder = !effectiveLogo || isStockPlaceholder(effectiveLogo);
 
   return (
     <>
-      <Helmet>
-        <title>{partner.name} - Official Partner | BioLegend Solutions</title>
-        <meta name="description" content={partner.description} />
-        <meta name="keywords" content={`${partner.name}, ${partner.specialties.join(", ")}, ${partner.category}`} />
-      </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
         <Header />
         <SEO
-          title={`${partner.name} - Partner | Biolegend Scientific`}
-          description={partner.description}
-          keywords={`${partner.name} Kenya, ${partner.category}, ${partner.specialties.join(', ')}`}
+          title={partner.id === "scientz" ? "SCIENTZ Laboratory Instruments in Kenya | Biolegend Scientific" : `${partner.name} - Partner | Biolegend Scientific`}
+          description={partner.id === "scientz" ? "Explore SCIENTZ life science instruments for ultrasonic homogenization, freeze-drying, microbial analysis, sample preparation, and laboratory temperature control." : partner.description}
+          keywords={`${partner.name} Kenya, ${partner.category}, ${partner.specialties.join(", ")}`}
           url={`https://biolegendscientific.co.ke/${partner.id}`}
-          image={partner.image}
+          image={partner.image || undefined}
         />
         <main className="pt-20">
           {/* Hero Section */}
@@ -352,6 +345,45 @@ const PartnerPage = () => {
               </div>
             </div>
           </section>
+
+          {partner.products && partner.products.length > 0 && (
+            <section className="py-16 bg-gray-50">
+              <div className="container mx-auto px-4">
+                <div className="max-w-3xl mb-10">
+                  <h2 className="text-3xl font-bold text-biolegend-purple mb-3">SCIENTZ Product Range</h2>
+                  <p className="text-gray-600">Explore product families and model options from the supplied SCIENTZ catalogs. Contact us for model selection, availability, and specifications.</p>
+                </div>
+                <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+                  {partner.products.map((product) => (
+                    <Card key={product.name} className="h-full border border-gray-200">
+                      <CardHeader>
+                        <Badge variant="secondary" className="w-fit bg-biolegend-purple/10 text-biolegend-purple">{product.category}</Badge>
+                        <CardTitle className="pt-2 text-xl text-biolegend-purple-dark">{product.name}</CardTitle>
+                        <CardDescription>{product.description}</CardDescription>
+                      </CardHeader>
+                      <CardContent className="space-y-5">
+                        <div>
+                          <h3 className="font-semibold text-sm mb-2">Models</h3>
+                          <p className="text-sm text-gray-600 leading-relaxed">{product.models.join(" · ")}</p>
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-sm mb-2">Key specifications</h3>
+                          <ul className="space-y-2">
+                            {product.specifications.map((specification) => (
+                              <li key={specification} className="text-sm text-gray-600 flex gap-2">
+                                <span className="text-biolegend-purple" aria-hidden="true">•</span>
+                                <span>{specification}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            </section>
+          )}
 
           {/* Call to Action */}
           <section className="py-16 bg-gradient-to-r from-biolegend-purple to-biolegend-purple-dark">
