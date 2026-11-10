@@ -115,6 +115,7 @@ const App = () => (
             <Route path="/micromedica" element={<PartnerPage />} />
             <Route path="/radwag" element={<PartnerPage />} />
             <Route path="/bioendo" element={<PartnerPage />} />
+            <Route path="/scientz" element={<PartnerPage />} />
             <Route path="/microlab-scientific" element={<PartnerPage />} />
             {/* Generic partner route for dynamic access */}
             <Route path="/partner/:partnerId" element={<PartnerPage />} />

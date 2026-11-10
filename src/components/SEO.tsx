@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { getAllSuppliers } from "@/data/enhancedSuppliers";
 
 interface SEOProps {
   title?: string;
@@ -159,6 +160,24 @@ const SEO = ({
           {"@type":"Offer","itemOffered":{"@type":"Product","name":"Solvents","category":"Laboratory Chemicals","brand":{"@type":"Brand","name":"Loba Chemie"}}}
         ]
       };
+    } else if (canonicalUrl.includes('/scientz')) {
+      const scientz = getAllSuppliers().find(supplier => supplier.id === "scientz");
+      baseSchema.hasOfferCatalog = {
+        "@type": "OfferCatalog",
+        "name": "SCIENTZ Life Science Instruments",
+        "itemListElement": (scientz?.products ?? []).map((product, index) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "item": {
+            "@type": "Product",
+            "name": product.name,
+            "description": product.description,
+            "brand": { "@type": "Brand", "name": "SCIENTZ" },
+            "category": product.category,
+            "model": product.models
+          }
+        }))
+      };
     } else if (canonicalUrl.includes('/services/laboratory-chemicals')) {
       baseSchema.hasOfferCatalog = {
         "@type": "OfferCatalog",
@@ -267,6 +286,12 @@ const SEO = ({
         <>
           <meta name="product" content="MicroMedica Dehydrated Culture Media" />
           <meta name="supplier" content="MicroMedica Laboratories" />
+        </>
+      )}
+      {url.includes('/scientz') && (
+        <>
+          <meta name="product" content="SCIENTZ Life Science Instruments" />
+          <meta name="supplier" content="SCIENTZ" />
         </>
       )}
       {(url.includes('/partner/loba-chemie') || url.includes('/loba-chemie') || url.includes('/services/laboratory-chemicals')) && (

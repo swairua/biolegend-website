@@ -10,6 +10,7 @@ const PartnersSection = () => {
       category: "Scientific Equipment",
       partners: [
         { name: "🇰🇪 Radwag", description: "Official Distributor in Kenya - Leading manufacturer of analytical balances and weighing equipment", specialty: "Analytical Balances, Precision Weighing, Laboratory Scales", url: "https://radwag.com", internalPath: "/radwag", isOfficial: true },
+        { name: "SCIENTZ", description: "Life science instruments for sample preparation, microbial analysis, freeze-drying, and temperature control", specialty: "Ultrasonic Homogenizers, Freeze Dryers, Microbial Analysis", url: "https://www.scientzbio.com", internalPath: "/scientz" },
         { name: "🇰🇪 Bioendo", description: "Official Distributor in Kenya - Specialized supplier of medical, dental, and laboratory equipment", specialty: "Medical Equipment, Dental Equipment, Laboratory Supplies", url: "https://bioendo.co.ke", internalPath: "/bioendo", isOfficial: true },
         { name: "🇰🇪 MicroLab Scientific", description: "Official Distributor in Kenya - Comprehensive supplier of laboratory equipment and scientific instruments", specialty: "Microscopes, Laboratory Equipment, Analytical Instruments", url: "https://microlabscientific.co.ke", internalPath: "/microlab-scientific", isOfficial: true },
         { name: "Labtron", description: "Advanced laboratory equipment and instrumentation", specialty: "Centrifuges, Incubators, Autoclaves", url: "https://www.labtron.com" },
@@ -62,7 +63,7 @@ const PartnersSection = () => {
   ];
 
   const globalBrands = [
-    "Merck", "Sigma-Aldrich", "Fisher Scientific", "Pyrex", "Palintest", "Hannah Instruments"
+    "Merck", "Sigma-Aldrich", "Fisher Scientific", "Pyrex", "Palintest", "Hannah Instruments", "SCIENTZ"
   ];
 
   return (
@@ -121,7 +122,8 @@ const PartnersSection = () => {
               { name: "Palintest", specialty: "Water Testing", experience: "75+ Years", color: "bg-blue-500", isOfficial: true },
               { name: "Radwag", specialty: "Weighing Equipment", experience: "Official Distributor", color: "bg-purple-600", isOfficial: true },
               { name: "MicroMedica", specialty: "Microbiology Media", experience: "Dehydrated Media", color: "bg-rose-600", isOfficial: true },
-              { name: "Duchefa Biochemie", specialty: "Plant Tissue Culture", experience: "Specialized Media", color: "bg-green-600", isOfficial: true }
+              { name: "Duchefa Biochemie", specialty: "Plant Tissue Culture", experience: "Specialized Media", color: "bg-green-600", isOfficial: true },
+              { name: "SCIENTZ", specialty: "Life Science Instruments", experience: "Since 1989", color: "bg-teal-600", isOfficial: false }
             ].map((partner, index) => (
               <div key={index} className={`bg-white rounded-lg shadow-elegant p-6 text-center hover:shadow-lg transition-shadow ${partner.isOfficial ? 'border-2 border-biolegend-yellow' : ''}`}>
                 <div className={`w-16 h-16 ${partner.color} rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-4`}>
