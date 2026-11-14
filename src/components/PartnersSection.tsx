@@ -264,7 +264,7 @@ const PartnersSection = () => {
         <div className="mt-16">
           <div className="bg-gradient-primary rounded-lg p-8 text-white">
             <h3 className="text-2xl font-bold text-center mb-8">
-              Why Choose Our Partner Network?
+              Why Choose Us
             </h3>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
