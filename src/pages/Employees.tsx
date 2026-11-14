@@ -179,6 +179,108 @@ const Employees = () => {
     ],
   };
 
+  const simonGichuki = {
+    name: "Simon Gichuki W",
+    title: "Technology Specialist",
+    specialization: "Full Stack Development, System Security & Compliance",
+    email: "gichukisimon@gmail.com",
+    phone: "+254722241745",
+    address: "Nairobi, Kenya",
+    profileSummary:
+      "Results-driven Technology Specialist with over 11 years of experience delivering scalable, secure, and high-performing digital solutions across financial services, enterprise platforms, healthcare systems, and cross-platform mobile applications. Combines deep technical expertise in system architecture with a strong focus on security, vulnerability assessment, and compliance, with a proven track record of integrating critical financial platforms while maintaining robust system integrity and auditability.",
+    coreCompetencies: [
+      "Security Best Practices & OWASP",
+      "Vulnerability Assessment",
+      "Data Integrity & Transaction Monitoring",
+      "Compliance & Risk Management",
+      "System Logging & Audit Trails",
+      "Angular, React, Java, Spring Boot",
+      "Flutter (Android, iOS & PWA Development)",
+      "Progressive Web Applications (PWA)",
+      "TypeScript, JavaScript, REST APIs",
+      "Microservices & Distributed Systems",
+      "API Integrations & ESB",
+      "DevOps Practices & Agile",
+      "PostgreSQL, MySQL, MSSQL, Oracle",
+      "Docker, Kubernetes, CI/CD",
+      "Linux/Unix Scripting",
+      "Cloud Services",
+      "Git, Jira, Jenkins",
+    ],
+    experiences: [
+      {
+        title: "Senior Full Stack Developer",
+        company: "DGE, Nairobi",
+        period: "November 2022 – Present",
+        description: [
+          "Designed and delivered scalable frontend and backend solutions using React, Angular, Java, and API-driven architectures.",
+          "Led integrations for financial platforms including PayTrigger and asset management solutions.",
+          "Developed custom API-based asset tokenization solutions integrating hardware with administrative dashboards.",
+          "Built secure integrations between internal systems and third-party services.",
+          "Collaborated with cross-functional teams to deliver solutions aligned with compliance requirements and security best practices.",
+        ],
+      },
+      {
+        title: "Full Stack Developer",
+        company: "Aliquot International, Nairobi",
+        period: "January 2021 – September 2022",
+        description: [
+          "Developed and maintained enterprise web applications for healthcare.",
+          "Designed backend services and RESTful APIs with strong emphasis on security, logging, and monitoring.",
+          "Conducted code reviews and system upgrades focused on performance optimization and security hardening.",
+        ],
+      },
+      {
+        title: "Full Stack Developer",
+        company: "Eclectics International, Nairobi",
+        period: "March 2018 – August 2020",
+        description: [
+          "Delivered enterprise-grade web applications, ESB integrations, and USSD services.",
+          "Contributed to financial systems development with a focus on transaction reliability and audit readiness.",
+        ],
+      },
+      {
+        title: "Software Developer",
+        company: "Colgate Palmolive, Nairobi",
+        period: "August 2015 – April 2018",
+        description: [
+          "Developed business process automation tools and inventory management solutions.",
+          "Supported integration of digital solutions with organizational goals while emphasizing process efficiency and security controls.",
+        ],
+      },
+      {
+        title: "Investment Banking & Systems Support",
+        company: "Suntra Investment Bank, Nairobi",
+        period: "August 2005 – April 2011",
+        description: [
+          "Supported financial systems and digital initiatives, including online trading platforms.",
+          "Worked with business and technical teams to improve system efficiency and security.",
+        ],
+      },
+    ],
+    education: [
+      {
+        degree: "Bachelor of Science (Computer Forensics and Cyber Security, minor in Software Engineering)",
+        institution: "United States International University (USIU)",
+        year: "BSc",
+      },
+      {
+        degree: "Advanced Web – Full Stack Development",
+        institution: "Zalego Institute of Technology",
+        year: "Certificate",
+      },
+      {
+        degree: "Associateship – Kenya Institute of Bankers (AKIB)",
+        institution: "Kenya School of Monetary Studies",
+        year: "AKIB",
+      },
+    ],
+    certifications: [
+      { title: "Certified Ethical Hacker (CEH)", issuer: "EC-Council" },
+      { title: "Associate – Kenya Institute of Bankers (AKIB)", issuer: "Kenya School of Monetary Studies" },
+    ],
+  };
+
   const samuelWaithaka = {
     name: "Samuel Ndegwa Waithaka",
     title: "Director – Engineering & Laboratory Systems",
@@ -268,7 +370,7 @@ const Employees = () => {
     <div className="min-h-screen flex flex-col">
       <SEO
         title="Our Team - Biolegend Scientific Ltd"
-        description="Meet our experienced team of professionals in human capital development and laboratory systems engineering."
+        description="Meet our experienced team of professionals in human capital development, laboratory systems engineering, and technology and systems security."
         canonical="https://biolegendscientific.co.ke/employees"
       />
       <Header />
@@ -319,6 +421,22 @@ const Employees = () => {
                 certifications={drCharlesKireru.certifications}
                 membershipsCertifications={drCharlesKireru.membershipsCertifications}
               />
+
+              <div className="md:col-span-2">
+                <EmployeeProfile
+                  name={simonGichuki.name}
+                  title={simonGichuki.title}
+                  specialization={simonGichuki.specialization}
+                  email={simonGichuki.email}
+                  phone={simonGichuki.phone}
+                  address={simonGichuki.address}
+                  profileSummary={simonGichuki.profileSummary}
+                  coreCompetencies={simonGichuki.coreCompetencies}
+                  experiences={simonGichuki.experiences}
+                  education={simonGichuki.education}
+                  certifications={simonGichuki.certifications}
+                />
+              </div>
             </div>
           </div>
         </section>
