@@ -141,15 +141,31 @@ const PartnersSection = () => {
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { name: "Palintest", specialty: "Water Testing", experience: "75+ Years", color: "bg-blue-500", isOfficial: true },
-              { name: "Radwag", specialty: "Weighing Equipment", experience: "Official Distributor", color: "bg-purple-600", isOfficial: true },
-              { name: "MicroMedica", specialty: "Microbiology Media", experience: "Dehydrated Media", color: "bg-rose-600", isOfficial: true },
-              { name: "Duchefa Biochemie", specialty: "Plant Tissue Culture", experience: "Specialized Media", color: "bg-green-600", isOfficial: true },
-              { name: "SCIENTZ", specialty: "Life Science Instruments", experience: "Since 1989", color: "bg-teal-600", isOfficial: true }
+              { name: "Palintest", specialty: "Water Testing", experience: "75+ Years", logo: "/images/partners/palintest.png", isOfficial: true },
+              { name: "Radwag", specialty: "Weighing Equipment", experience: "Official Distributor", logo: "/images/partners/radwag.svg", isOfficial: true },
+              { name: "MicroMedica", specialty: "Microbiology Media", experience: "Dehydrated Media", logo: "/images/partners/micromedica.png", isOfficial: true },
+              { name: "Duchefa Biochemie", specialty: "Plant Tissue Culture", experience: "Specialized Media", logo: "/images/partners/duchefa-biochemie.png", isOfficial: true },
+              { name: "SCIENTZ", specialty: "Life Science Instruments", experience: "Since 1989", logo: "/images/partners/scientz.png", isOfficial: true }
             ].map((partner, index) => (
               <div key={index} className={`bg-white rounded-lg shadow-elegant p-6 text-center hover:shadow-lg transition-shadow ${partner.isOfficial ? 'border-2 border-biolegend-yellow' : ''}`}>
-                <div className={`w-16 h-16 ${partner.color} rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-4`}>
-                  {partner.name.substring(0, 2)}
+                <div className="h-20 flex items-center justify-center mb-4">
+                  <img
+                    src={partner.logo}
+                    alt={`${partner.name} logo`}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain"
+                    onError={(e) => {
+                      (e.currentTarget as HTMLImageElement).style.display = 'none';
+                      const fallback = e.currentTarget.nextElementSibling as HTMLElement;
+                      if (fallback) fallback.style.display = 'flex';
+                    }}
+                  />
+                  <div
+                    className="hidden w-16 h-16 bg-gradient-primary rounded-full items-center justify-center text-white font-bold text-xl"
+                    aria-hidden="true"
+                  >
+                    {partner.name.substring(0, 2)}
+                  </div>
                 </div>
                 <h4 className="font-bold text-lg mb-2">{partner.name} {partner.isOfficial ? '🇰🇪' : ''}</h4>
                 <p className="text-biolegend-purple font-semibold text-sm mb-1">{partner.specialty}</p>
