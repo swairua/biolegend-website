@@ -180,7 +180,7 @@ const Employees = () => {
   };
 
   const simonGichuki = {
-    name: "Simon Gichuki W",
+    name: "Eng. Simon Gichuki W",
     title: "Technology Specialist",
     specialization: "Full Stack Development, System Security & Compliance",
     email: "gichukisimon@gmail.com",
