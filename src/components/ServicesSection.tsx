@@ -8,7 +8,6 @@ import {
   Beaker,
   Activity,
   Zap,
-  ShoppingCart,
   Droplets,
   ExternalLink
 } from "lucide-react";
@@ -244,7 +243,7 @@ const ServicesSection = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {services.map((service, index) => (
             <Card key={index} className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 overflow-hidden">
               {/* Service Image */}
@@ -324,73 +323,6 @@ const ServicesSection = () => {
           ))}
         </div>
 
-        {/* Call to Action */}
-        <div className="bg-gradient-hero rounded-3xl p-12 text-center text-white shadow-elegant">
-          <div className="max-w-3xl mx-auto">
-            <h3 className="text-3xl lg:text-4xl font-bold mb-6">
-              Need Something Specific?
-            </h3>
-            <p className="text-xl text-white/90 mb-8">
-              We work with multiple vendors and can source specialized equipment and supplies 
-              tailored to your unique laboratory requirements.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
-                className="bg-biolegend-yellow text-biolegend-purple hover:bg-biolegend-yellow/90 font-semibold px-8 py-4 shadow-glow"
-              >
-                <ShoppingCart className="mr-2 h-5 w-5" />
-                Request Quote
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-white text-white hover:bg-white hover:text-biolegend-purple px-8 py-4"
-              >
-                Download Catalog
-              </Button>
-            </div>
-          </div>
-        </div>
-
-        {/* Industry Focus */}
-        <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
-          <div className="text-center p-6 bg-background rounded-xl shadow-sm border hover:shadow-elegant transition-all duration-300">
-            <div className="text-4xl mb-4">🎓</div>
-            <h4 className="font-semibold text-foreground mb-2">Education</h4>
-            <p className="text-sm text-muted-foreground">Universities, colleges, and research institutions</p>
-          </div>
-
-          <div className="text-center p-6 bg-background rounded-xl shadow-sm border hover:shadow-elegant transition-all duration-300">
-            <div className="text-4xl mb-4">🏥</div>
-            <h4 className="font-semibold text-foreground mb-2">Healthcare</h4>
-            <p className="text-sm text-muted-foreground">Hospitals, clinics, and diagnostic centers</p>
-          </div>
-
-          <div className="text-center p-6 bg-background rounded-xl shadow-sm border hover:shadow-elegant transition-all duration-300">
-            <div className="text-4xl mb-4">💊</div>
-            <h4 className="font-semibold text-foreground mb-2">Pharmaceutical</h4>
-            <p className="text-sm text-muted-foreground">Drug development and quality control</p>
-          </div>
-
-          <div className="text-center p-6 bg-background rounded-xl shadow-sm border hover:shadow-elegant transition-all duration-300">
-            <div className="text-4xl mb-4">🍎</div>
-            <h4 className="font-semibold text-foreground mb-2">Food & Beverages</h4>
-            <p className="text-sm text-muted-foreground">Food safety and quality testing facilities</p>
-          </div>
-
-          <div className="text-center p-6 bg-background rounded-xl shadow-sm border hover:shadow-elegant transition-all duration-300">
-            <div className="text-4xl mb-4">🔬</div>
-            <h4 className="font-semibold text-foreground mb-2">Research</h4>
-            <p className="text-sm text-muted-foreground">Research institutions and laboratories</p>
-          </div>
-
-          <div className="text-center p-6 bg-background rounded-xl shadow-sm border hover:shadow-elegant transition-all duration-300">
-            <div className="text-4xl mb-4">🌱</div>
-            <h4 className="font-semibold text-foreground mb-2">Environmental</h4>
-            <p className="text-sm text-muted-foreground">Water quality and environmental testing</p>
-          </div>
-        </div>
       </div>
     </section>
   );

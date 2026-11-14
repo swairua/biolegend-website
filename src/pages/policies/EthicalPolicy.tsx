@@ -26,11 +26,11 @@ const EthicalPolicy = () => {
               <section>
                 <h2 className="text-2xl font-bold mb-3">2. Core Values</h2>
                 <ul className="list-disc list-inside text-muted-foreground space-y-1">
-                  <li>Integrity & Honesty</li>
-                  <li>Product Quality & Safety</li>
-                  <li>Respect & Inclusion</li>
-                  <li>Accountability</li>
-                  <li>Sustainability</li>
+                  <li>Quality: We provide reliable products that meet our customers' expectations.</li>
+                  <li>Integrity: We believe in honesty, transparency and keeping our promises.</li>
+                  <li>Reliability: We are committed to delivering what our customers need, when they need it.</li>
+                  <li>Customer Focus: We listen, understand, and work towards meeting our customers' needs.</li>
+                  <li>Growth and Innovation: We continuously seek better solutions to support science and industry.</li>
                 </ul>
               </section>
 

@@ -10,7 +10,7 @@ const PartnersSection = () => {
       category: "Scientific Equipment",
       partners: [
         { name: "🇰🇪 Radwag", description: "Official Distributor in Kenya - Leading manufacturer of analytical balances and weighing equipment", specialty: "Analytical Balances, Precision Weighing, Laboratory Scales", url: "https://radwag.com", internalPath: "/radwag", isOfficial: true },
-        { name: "SCIENTZ", description: "Life science instruments for sample preparation, microbial analysis, freeze-drying, and temperature control", specialty: "Ultrasonic Homogenizers, Freeze Dryers, Microbial Analysis", url: "https://www.scientzbio.com", internalPath: "/scientz" },
+        { name: "🇰🇪 SCIENTZ", description: "Official Distributor in Kenya - Life science instruments for sample preparation, microbial analysis, freeze-drying, and temperature control", specialty: "Ultrasonic Homogenizers, Freeze Dryers, Microbial Analysis", url: "https://www.scientzbio.com", internalPath: "/scientz", isOfficial: true },
         { name: "🇰🇪 Bioendo", description: "Official Distributor in Kenya - Specialized supplier of medical, dental, and laboratory equipment", specialty: "Medical Equipment, Dental Equipment, Laboratory Supplies", url: "https://bioendo.co.ke", internalPath: "/bioendo", isOfficial: true },
         { name: "🇰🇪 MicroLab Scientific", description: "Official Distributor in Kenya - Comprehensive supplier of laboratory equipment and scientific instruments", specialty: "Microscopes, Laboratory Equipment, Analytical Instruments", url: "https://microlabscientific.co.ke", internalPath: "/microlab-scientific", isOfficial: true },
         { name: "Labtron", description: "Advanced laboratory equipment and instrumentation", specialty: "Centrifuges, Incubators, Autoclaves", url: "https://www.labtron.com" },
@@ -63,7 +63,13 @@ const PartnersSection = () => {
   ];
 
   const globalBrands = [
-    "Merck", "Sigma-Aldrich", "Fisher Scientific", "Pyrex", "Palintest", "Hannah Instruments", "SCIENTZ"
+    { name: "Merck", logo: "/images/partners/merck.png" },
+    { name: "Sigma-Aldrich", logo: "/images/partners/sigma-aldrich.png" },
+    { name: "Fisher Scientific", logo: "/images/partners/fisher-scientific.png" },
+    { name: "Pyrex", logo: "/images/partners/pyrex.png" },
+    { name: "Palintest", logo: "/images/partners/palintest.png" },
+    { name: "Hanna Instruments", logo: "/images/partners/hanna-instruments.png" },
+    { name: "SCIENTZ", logo: "/images/partners/scientz.png" }
   ];
 
   return (
@@ -97,14 +103,30 @@ const PartnersSection = () => {
             <h3 className="text-xl font-semibold text-center mb-6 text-biolegend-purple">
               Representing Global Leaders
             </h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 items-center">
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 items-center">
               {globalBrands.map((brand, index) => (
-                <div key={index} className="group flex flex-col items-center p-4 rounded-lg hover:bg-muted/50 transition-all duration-300">
-                  <div className="w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center text-white font-bold text-lg mb-2 group-hover:scale-110 transition-transform">
-                    {brand.substring(0, 2).toUpperCase()}
+                <div key={index} className="group flex flex-col items-center p-3 rounded-lg hover:bg-muted/50 transition-all duration-300">
+                  <div className="w-full h-20 bg-white border rounded-xl flex items-center justify-center p-3 mb-2 shadow-sm group-hover:shadow-md group-hover:-translate-y-0.5 transition-all overflow-hidden">
+                    <img
+                      src={brand.logo}
+                      alt={`${brand.name} logo`}
+                      loading="lazy"
+                      className="max-h-full max-w-full object-contain"
+                      onError={(e) => {
+                        (e.currentTarget as HTMLImageElement).style.display = 'none';
+                        const fallback = e.currentTarget.nextElementSibling as HTMLElement;
+                        if (fallback) fallback.style.display = 'flex';
+                      }}
+                    />
+                    <div
+                      className="hidden w-full h-full bg-gradient-primary rounded-lg items-center justify-center text-white font-bold text-lg"
+                      aria-hidden="true"
+                    >
+                      {brand.name.substring(0, 2).toUpperCase()}
+                    </div>
                   </div>
                   <span className="text-sm font-medium text-center group-hover:text-biolegend-purple transition-colors">
-                    {brand}
+                    {brand.name}
                   </span>
                 </div>
               ))}
@@ -123,7 +145,7 @@ const PartnersSection = () => {
               { name: "Radwag", specialty: "Weighing Equipment", experience: "Official Distributor", color: "bg-purple-600", isOfficial: true },
               { name: "MicroMedica", specialty: "Microbiology Media", experience: "Dehydrated Media", color: "bg-rose-600", isOfficial: true },
               { name: "Duchefa Biochemie", specialty: "Plant Tissue Culture", experience: "Specialized Media", color: "bg-green-600", isOfficial: true },
-              { name: "SCIENTZ", specialty: "Life Science Instruments", experience: "Since 1989", color: "bg-teal-600", isOfficial: false }
+              { name: "SCIENTZ", specialty: "Life Science Instruments", experience: "Since 1989", color: "bg-teal-600", isOfficial: true }
             ].map((partner, index) => (
               <div key={index} className={`bg-white rounded-lg shadow-elegant p-6 text-center hover:shadow-lg transition-shadow ${partner.isOfficial ? 'border-2 border-biolegend-yellow' : ''}`}>
                 <div className={`w-16 h-16 ${partner.color} rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-4`}>

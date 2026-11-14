@@ -3,6 +3,7 @@ import { Mail, Phone, MapPin, Clock, MessageCircle, Send } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import ClientsSection from "@/components/ClientsSection";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -86,6 +87,8 @@ const Contact = () => {
             </div>
           </div>
         </section>
+
+        <ClientsSection />
 
         <section className="py-20 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

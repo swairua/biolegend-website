@@ -332,26 +332,26 @@ const ServicesUpdated = () => {
               
               <div className="bg-gradient-primary p-8 rounded-lg text-white">
                 <h3 className="text-2xl font-bold mb-4">Our Values</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-center">
-                    <ArrowRight className="w-5 h-5 mr-3 text-biolegend-yellow" />
-                    <span>Integrity</span>
+                <ul className="space-y-4">
+                  <li className="flex items-start">
+                    <ArrowRight className="w-5 h-5 mr-3 mt-0.5 text-biolegend-yellow flex-shrink-0" />
+                    <span><span className="font-semibold">Quality:</span> We provide reliable products that meet our customers' expectations.</span>
                   </li>
-                  <li className="flex items-center">
-                    <ArrowRight className="w-5 h-5 mr-3 text-biolegend-yellow" />
-                    <span>Quality and Reliability</span>
+                  <li className="flex items-start">
+                    <ArrowRight className="w-5 h-5 mr-3 mt-0.5 text-biolegend-yellow flex-shrink-0" />
+                    <span><span className="font-semibold">Integrity:</span> We believe in honesty, transparency and keeping our promises.</span>
                   </li>
-                  <li className="flex items-center">
-                    <ArrowRight className="w-5 h-5 mr-3 text-biolegend-yellow" />
-                    <span>Service First</span>
+                  <li className="flex items-start">
+                    <ArrowRight className="w-5 h-5 mr-3 mt-0.5 text-biolegend-yellow flex-shrink-0" />
+                    <span><span className="font-semibold">Reliability:</span> We are committed to delivering what our customers need, when they need it.</span>
                   </li>
-                  <li className="flex items-center">
-                    <ArrowRight className="w-5 h-5 mr-3 text-biolegend-yellow" />
-                    <span>Transparency</span>
+                  <li className="flex items-start">
+                    <ArrowRight className="w-5 h-5 mr-3 mt-0.5 text-biolegend-yellow flex-shrink-0" />
+                    <span><span className="font-semibold">Customer Focus:</span> We listen, understand, and work towards meeting our customers' needs.</span>
                   </li>
-                  <li className="flex items-center">
-                    <ArrowRight className="w-5 h-5 mr-3 text-biolegend-yellow" />
-                    <span>Innovation</span>
+                  <li className="flex items-start">
+                    <ArrowRight className="w-5 h-5 mr-3 mt-0.5 text-biolegend-yellow flex-shrink-0" />
+                    <span><span className="font-semibold">Growth and Innovation:</span> We continuously seek better solutions to support science and industry.</span>
                   </li>
                 </ul>
               </div>

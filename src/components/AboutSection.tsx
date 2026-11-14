@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Target, Eye, Users, Trophy, Shield, Clock } from "lucide-react";
+import { Target, Eye, Users, Trophy, Quote, BadgeCheck, ShieldCheck, PackageCheck, TrendingUp, CheckCircle2 } from "lucide-react";
 
 const AboutSection = () => {
   return (
@@ -37,11 +37,11 @@ const AboutSection = () => {
                 <div className="bg-red-500 text-white p-3 rounded-xl mr-4">
                   <Target className="w-6 h-6" />
                 </div>
-                <h3 className="text-2xl font-bold text-red-800">MISSION</h3>
+                <h3 className="text-2xl font-bold text-red-800">Our Mission</h3>
               </div>
               <p className="text-red-700 leading-relaxed">
-                Our mission is to provide affordable, flexible, reliable and high quality scientific solutions 
-                to our esteemed clients.
+                To provide quality laboratory equipment, reagents, and consumables that support
+                accurate testing, research, innovation, and industrial growth.
               </p>
             </CardContent>
           </Card>
@@ -56,8 +56,8 @@ const AboutSection = () => {
                 <h3 className="text-2xl font-bold text-green-800">Our Vision</h3>
               </div>
               <p className="text-green-700 leading-relaxed">
-                To give customers the most compelling scientific experience possible through innovative solutions 
-                and exceptional service delivery.
+                To be a trusted partner in advancing science, research, and industry through
+                reliable laboratory solutions.
               </p>
             </CardContent>
           </Card>
@@ -84,24 +84,78 @@ const AboutSection = () => {
           </Card>
         </div>
 
-        {/* Goals and Objectives with Images */}
+        {/* Our Promise */}
+        <div className="mb-16">
+          <div className="bg-gradient-primary rounded-2xl p-8 md:p-10 text-white shadow-elegant flex flex-col md:flex-row items-center gap-6">
+            <div className="bg-biolegend-yellow text-biolegend-purple w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0 shadow-glow">
+              <Quote className="w-8 h-8" />
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold mb-2">Our Promise</h3>
+              <p className="text-white/90 leading-relaxed text-lg">
+                Biolegend Scientific Limited is more than a supplier. We are a partner in science and industry
+                committed to providing quality products, practical solutions, and dependable support to help
+                our customers achieve their goals.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Our Core Values */}
+        <div className="mb-16">
+          <div className="text-center mb-8">
+            <h3 className="text-3xl font-bold text-foreground mb-2">Our Core Values</h3>
+            <p className="text-muted-foreground">The principles that guide everything we do</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {[
+              { name: "Quality", description: "We provide reliable products that meet our customers' expectations.", icon: BadgeCheck },
+              { name: "Integrity", description: "We believe in honesty, transparency and keeping our promises.", icon: ShieldCheck },
+              { name: "Reliability", description: "We are committed to delivering what our customers need, when they need it.", icon: PackageCheck },
+              { name: "Customer Focus", description: "We listen, understand, and work towards meeting our customers' needs.", icon: Users },
+              { name: "Growth and Innovation", description: "We continuously seek better solutions to support science and industry.", icon: TrendingUp },
+            ].map((value, index) => (
+              <Card key={index} className="text-center hover:shadow-elegant transition-shadow border-biolegend-purple/10">
+                <CardContent className="p-6">
+                  <div className="bg-biolegend-purple text-white w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-3">
+                    <value.icon className="w-6 h-6" />
+                  </div>
+                  <h4 className="font-bold text-biolegend-purple mb-2">{value.name}</h4>
+                  <p className="text-xs text-muted-foreground leading-relaxed">{value.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* Objectives with Images */}
         <Card className="bg-gradient-to-r from-gray-50 to-gray-100 border-gray-200 shadow-elegant overflow-hidden">
           <CardContent className="p-0">
             <div className="grid md:grid-cols-2">
-              <div className="p-12">
-                <h3 className="text-3xl font-bold text-gray-800 mb-8">Goals And Objectives</h3>
-                <div className="space-y-6">
-                  <p className="text-gray-700 leading-relaxed text-lg">
-                    Our primary objective is to serve our customers in a way that is remarkably different from our
-                    competitors so that we do not just supply the orders but do it in a way that leaves a positive
-                    impression on them.
-                  </p>
-                  <p className="text-gray-700 leading-relaxed text-lg">
-                    By so doing, we intend to make ourselves the company of choice to any client we come across.
-                    Our long-term objective is to build a market that is not entirely based on price but on customer
-                    satisfaction, the ultimate goal being to enhance value for money.
-                  </p>
-                </div>
+              <div className="p-8 md:p-12">
+                <h3 className="text-3xl font-bold text-gray-800 mb-4">Our Objectives</h3>
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  To achieve these goals, we are committed to:
+                </p>
+                <ul className="grid sm:grid-cols-2 gap-4">
+                  {[
+                    "Continuously expanding our product portfolio to cover diverse laboratory and industrial requirements.",
+                    "Establishing partnerships with reputable manufacturers and international suppliers.",
+                    "Maintaining adequate stock of fast-moving products to improve availability and reduce customer waiting times.",
+                    "Providing timely quotations, deliveries, and after-sales technical support.",
+                    "Supporting customers in equipment installation, maintenance, servicing, and calibration.",
+                    "Offering practical and cost-effective solutions without compromising product quality.",
+                    "Expanding our distribution network into Uganda, Tanzania, Rwanda, DRC and other African markets.",
+                    "Investing in technical knowledge, staff development and improved customer service.",
+                    "Maintaining ethical business practices and meeting all applicable regulatory and statutory requirements.",
+                    "Building a sustainable business that delivers value to customers, employees, suppliers and other stakeholders.",
+                  ].map((objective, index) => (
+                    <li key={index} className="flex items-start gap-2">
+                      <CheckCircle2 className="w-5 h-5 text-biolegend-yellow flex-shrink-0 mt-0.5" />
+                      <span className="text-sm text-gray-700 leading-snug">{objective}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
               <div className="relative">
                 <img
@@ -114,83 +168,6 @@ const AboutSection = () => {
             </div>
           </CardContent>
         </Card>
-
-        {/* Our Customers with Visual Elements */}
-        <Card className="mt-8 bg-gradient-to-r from-red-50 to-red-100 border-red-200 shadow-elegant overflow-hidden">
-          <CardContent className="p-0">
-            <div className="grid md:grid-cols-3">
-              <div className="md:col-span-2 p-12">
-                <div className="flex items-center mb-8">
-                  <div className="bg-red-500 text-white p-4 rounded-xl mr-4">
-                    <Users className="w-8 h-8" />
-                  </div>
-                  <h3 className="text-3xl font-bold text-red-800">Our Customers</h3>
-                </div>
-                <p className="text-red-700 leading-relaxed text-lg">
-                  Customers form the heart of all service industries activities and every action. This originates from
-                  our quest to satisfy our customers' expectations and give them more value for their money.
-                </p>
-
-                {/* Customer Icons */}
-                <div className="grid grid-cols-3 gap-4 mt-8">
-                  <div className="text-center p-4 bg-white/50 rounded-lg">
-                    <div className="text-2xl mb-2">🏥</div>
-                    <div className="text-sm font-medium text-red-800">Healthcare</div>
-                  </div>
-                  <div className="text-center p-4 bg-white/50 rounded-lg">
-                    <div className="text-2xl mb-2">🎓</div>
-                    <div className="text-sm font-medium text-red-800">Education</div>
-                  </div>
-                  <div className="text-center p-4 bg-white/50 rounded-lg">
-                    <div className="text-2xl mb-2">🔬</div>
-                    <div className="text-sm font-medium text-red-800">Research</div>
-                  </div>
-                </div>
-              </div>
-              <div className="relative">
-                <img
-                  src="https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop"
-                  alt="Laboratory professionals"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-l from-transparent to-red-100/30"></div>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Service Features */}
-        <div className="grid md:grid-cols-3 gap-8 mt-16">
-          <div className="text-center">
-            <div className="bg-biolegend-yellow text-biolegend-purple w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-glow">
-              <Shield className="w-8 h-8" />
-            </div>
-            <h4 className="text-xl font-semibold text-foreground mb-3">Quality Assurance</h4>
-            <p className="text-muted-foreground">
-              All our products meet international standards and undergo rigorous quality control processes.
-            </p>
-          </div>
-
-          <div className="text-center">
-            <div className="bg-biolegend-yellow text-biolegend-purple w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-glow">
-              <Clock className="w-8 h-8" />
-            </div>
-            <h4 className="text-xl font-semibold text-foreground mb-3">Fast Delivery</h4>
-            <p className="text-muted-foreground">
-              Quick turnaround times and efficient logistics ensure your laboratory operations never stop.
-            </p>
-          </div>
-
-          <div className="text-center">
-            <div className="bg-biolegend-yellow text-biolegend-purple w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-glow">
-              <Users className="w-8 h-8" />
-            </div>
-            <h4 className="text-xl font-semibold text-foreground mb-3">Expert Support</h4>
-            <p className="text-muted-foreground">
-              Our certified professionals provide technical support and consultation for all your scientific needs.
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );

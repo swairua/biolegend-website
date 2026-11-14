@@ -1,5 +1,4 @@
 import { Award } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const TrustedPartnersSection = () => {
@@ -11,7 +10,8 @@ const TrustedPartnersSection = () => {
     { name: "Duchefa Biochemie", id: "duchefa-biochemie", color: "bg-green-600", icon: "🧪" },
     { name: "MicroMedica", id: "micromedica", color: "bg-rose-600", icon: "🧬" },
     { name: "Bioendo", id: "bioendo", color: "bg-orange-600", icon: "🔬" },
-    { name: "MicroLab Scientific", id: "microlab-scientific", color: "bg-teal-600", icon: "🔭" }
+    { name: "MicroLab Scientific", id: "microlab-scientific", color: "bg-teal-600", icon: "🔭" },
+    { name: "SCIENTZ", id: "scientz", color: "bg-rose-600", icon: "🧬" }
   ];
 
   return (
@@ -31,7 +31,7 @@ const TrustedPartnersSection = () => {
         </div>
 
         {/* Distributors Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3 mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-9 gap-3 mb-8">
           {officialDistributors.map((distributor) => (
             <Link
               key={distributor.id}
@@ -51,18 +51,9 @@ const TrustedPartnersSection = () => {
 
         {/* Supporting Text */}
         <div className="text-center">
-          <p className="text-foreground/70 text-sm max-w-2xl mx-auto mb-4">
+          <p className="text-foreground/70 text-sm max-w-2xl mx-auto">
             Each official distributor is carefully selected to ensure quality, reliability, and dedicated support for your laboratory needs.
           </p>
-          <Link to="/partners">
-            <Button
-              size="sm"
-              variant="outline"
-              className="border-biolegend-purple text-biolegend-purple hover:bg-biolegend-purple hover:text-white"
-            >
-              View All Partners
-            </Button>
-          </Link>
         </div>
       </div>
     </section>
